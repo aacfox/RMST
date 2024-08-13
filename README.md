@@ -1,2 +1,2 @@
 # RMST
-Randomized Expected Linear Time MST Algorithm
+Randomized Expected Semilinear(yet) Time MST Algorithm
