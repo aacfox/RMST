@@ -8,31 +8,30 @@ export int main() {
 	enum class button { quit = -1, confirmed, change_path, tests, main_menu };
 	using enum button;
 	using integral_graph = Graph<intmax_t>;
+	using dir_iter = recursive_directory_iterator;
 	for (auto [graph, pressed, temp_button, default_path, temp_string, found, i] = tuple{
-		integral_graph{}, main_menu, int{}, current_path(), string{}, false, directory_iterator() };
+		integral_graph{}, main_menu, int{}, current_path(), string{}, false, dir_iter() };
 		pressed != quit;
 		  print("3. Return to main menu\n-1. Quit\n"),
 		  cin >> temp_button,
 		  pressed = static_cast<button>(temp_button)) {
 		auto traverse_csvs = [&](cauto& apath, cauto& action) {
-			for (i = directory_iterator(apath);
-				  i != directory_iterator(); ++i, ++temp_button)
+			for (i = dir_iter(apath);
+				  i != dir_iter(); ++i, ++temp_button)
 				if (i->path().extension() == ".csv") action();
 		};
 		auto show_graphs = [&]() {
 			graph = integral_graph::from_csv(ifstream{ i->path() });
 			auto formatted_out = [](auto&& graph) {
-				for (bool delimeter{}; cauto & edge : graph) {
-					print("{}->{}={}{}", edge.origin, edge.exit, edge.weight,
-							(delimeter ? '\n' : ' '));
-					delimeter = !delimeter;
-				}
+				for (cauto& edge : graph)
+					print("{};{};{}\n", edge.origin, edge.exit, edge.weight);
 				print("___________________________\n");
 			};
 			print("Original graph from {}:\n", i->path().filename().string());
 			formatted_out(graph);
 			print("Its MST:\n");
 			formatted_out(graph.mst());
+			graph.mermaid(i->path().replace_extension(".mm").filename());
 		};
 		switch (pressed) {
 		case main_menu: [[fallthrough]];
@@ -71,7 +70,7 @@ Current path: {}
 			print("Which one? ");
 			cin >> temp_button;
 			print("Performing some magic...\n");
-			for (i = directory_iterator(current_path());
+			for (i = dir_iter(current_path());
 				  temp_button != 0; --temp_button, ++i);
 			show_graphs();
 		}
