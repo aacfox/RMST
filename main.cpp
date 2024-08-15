@@ -2,21 +2,22 @@ module;
 #define cauto const auto
 export module main;
 import boilerplate;
+import graph;
 using namespace boil;
 
 export int main() {
-	enum class button { quit = -1, confirmed, change_path, tests, main_menu };
+	enum class button { quit = -1, confirmed, change_path, all, main_menu };
 	using enum button;
 	using integral_graph = Graph<intmax_t>;
 	using dir_iter = recursive_directory_iterator;
-	for (auto [graph, pressed, temp_button, default_path, temp_string, found, i] = tuple{
-		integral_graph{}, main_menu, int{}, current_path(), string{}, false, dir_iter() };
+	for (auto [graph, pressed, temp_button, temp_string, found, i] = tuple{
+		integral_graph{}, main_menu, int{}, string{}, false, dir_iter() };
 		pressed != quit;
 		  print("3. Return to main menu\n-1. Quit\n"),
 		  cin >> temp_button,
 		  pressed = static_cast<button>(temp_button)) {
-		auto traverse_csvs = [&](cauto& apath, cauto& action) {
-			for (i = dir_iter(apath);
+		auto traverse_csvs = [&](cauto& action) {
+			for (i = dir_iter(current_path());
 				  i != dir_iter(); ++i, ++temp_button)
 				if (i->path().extension() == ".csv") action();
 		};
@@ -31,7 +32,9 @@ export int main() {
 			formatted_out(graph);
 			print("Its MST:\n");
 			formatted_out(graph.mst());
-			graph.mermaid(i->path().replace_extension(".mm").filename());
+			print("Mermaid code is created as well.\n_______________________\n");
+			graph.mermaid(ofstream{ path{ i->path() }
+			.replace_extension(".mm").filename() });
 		};
 		switch (pressed) {
 		case main_menu: [[fallthrough]];
@@ -46,7 +49,7 @@ Check the source code and feel free to add new functionality!
 Current path: {}
 0. Show its contents
 1. Change current path
-2. Run tests
+2. Run all
 )", "\033[2J\033[H", current_path().string());
 			break;
 		case change_path: print("Enter valid directory: ");
@@ -56,15 +59,14 @@ Current path: {}
 				else current_path(new_path.remove_filename());
 				print("Success!\n");
 			} else
-				print("Such a path doesn't exist...\n2. Try again\n");
+				print("Such a path doesn't exist...\n1. Try again\n");
 			break;
 		case confirmed:
 		{
 			found = false;
 			temp_button = 0;
-			traverse_csvs(current_path(), [&]() {
-				print("{}. {}\n", temp_button, i->path().filename().string());
-				found = true;
+			traverse_csvs([&]() { print("{}. {}\n", temp_button, i->path()
+												 .filename().string()); found = true;
 			});
 			if (not found) { print("No .csv files found\n"); break; }
 			print("Which one? ");
@@ -75,9 +77,8 @@ Current path: {}
 			show_graphs();
 		}
 		break;
-		case tests:
-			traverse_csvs(default_path, show_graphs);
-			print("These tests prove that boruvka rules!\n");
+		case all:
+			traverse_csvs(show_graphs);
 			break;
 		}
 	}

@@ -4,7 +4,7 @@ export module graph;
 import boilerplate;
 using namespace boil;
 
-template<arithmetic Weight = bool> class Graph {
+export template<arithmetic Weight = bool> class Graph {
 public:
 	struct Edge {
 		size_t origin{};
@@ -13,6 +13,11 @@ public:
 		bool operator==(const Edge&) const = default;
 		auto operator<=>(const Edge& other) const { return weight <=> other.weight; }
 	};
+	using edge_set = unordered_set < Edge, decltype([](cauto& edge) noexcept {
+		return hash<size_t>{}(edge.origin) ^ hash<size_t>{}(edge.exit); }),
+		decltype([](cauto& x, cauto& y) {
+		if (x.weight == y.weight and (x.origin ^ y.origin == x.exit ^ y.exit))
+			return true; else return false; }) > ;
 private:
 	size_t _fresh_id{ max_v<size_t> };
 	vector<Edge> _edge_list;
@@ -76,26 +81,19 @@ public:
 	auto end() noexcept { return _edge_list.end(); }
 	auto cend() const noexcept { return _edge_list.cend(); }
 	template <size_t Maximum_vertices = 1024> Graph mst() const {
-		using Supernode = bitset<N>;
-		using edge_set = unordered_set < Edge, decltype([](cauto& edge) noexcept {
-			return hash<size_t>{}(edge.origin) ^ hash<size_t>{}(edge.exit); }),
-			decltype([](cauto& x, cauto& y) {
-			if (x.weight == y.weight and (
-				x.origin == y.origin and x.exit == y.exit or
-				x.exit == y.origin and y.exit == x.origin))
-				return true; else return false; }) > ;
+		using Supernode = bitset<Maximum_vertices>;
 		//TL;DR above: graph is interpreted as undirected
 		using edge_multimap = unordered_multimap<Supernode, Edge>;
-		if (N < fresh_id()) throw (length_error("Default template argument for number of vertices (which is 1024) proved insufficient."));
-		edge_multimap edges; //bitset-based hash map for easier node combining
+		if (Maximum_vertices < fresh_id()) throw length_error("Default template argument for number of vertices (which is 1024) proved insufficient.");
+		edge_multimap edges{}; //bitset-based hash map for easier node combining
 		vector<Supernode> supernodes(fresh_id()); //vector for tracking remaining supernodes
 		vector nodes(fresh_id(), supernodes.end()); //disjoint set of original nodes
 		//the latter two can be interpreted as nonoptimized-memory-wise hash_maps 
 		//vertice_ID -> respective_type
-		for (cauto edge : *this) {
-			supernodes[edge.origin].set(edge.origin);
-			nodes[edge.origin] = supernodes.begin() + edge.origin;
-			edges.emplace(supernodes[edge.origin], move(edge));
+		for (auto i{ this->cbegin() }; i != this->cend(); ++i) {
+			supernodes[i->origin].set(i->origin);
+			nodes[i->origin] = supernodes.begin() + i->origin;
+			edges.emplace(supernodes[i->origin], *i);
 		}
 		auto iter{ edges.cend() }, sentinel{ iter };
 		//this is one of the subroutines of boruvka(); should be used once
@@ -123,9 +121,9 @@ public:
 		trim_selfs_redundants(edges);
 		//The actual Randomized Expected Linear-time MST algorithm:
 		auto rmst = [&](this auto self, edge_multimap& input) {
-			edge_set boruvkas;
+			edge_set boruvkas{};
 			auto boruvka = [&]() {
-				edge_set buffer;
+				edge_set buffer{};
 				//choosing-incident-edges cycle:
 				for (auto lightest{ iter }; cauto & node : supernodes
 					  | views::filter([](cauto& x) { return x.any(); })) {
@@ -186,9 +184,20 @@ public:
 		}
 		return mst;
 	}
-	path mermaid(optional<string_view> name) const {
-		print("{}_{}", today(), o_clock());
-		return {};
+	template<class T> requires derived_from<remove_cvref_t<T>, ostream>
+	void mermaid(T&& output) const {
+		edge_set all_edges(cbegin(), cend());
+		edge_set msf{ from_range, mst() };
+		print(output, "```mermaid\ngraph LR;\n");
+		for (cauto id : views::iota(0ull, fresh_id()))
+			print(output, "id{}(({})) ", id, id);
+		print(output, "\n");
+		for (cauto& [origin, exit, weight] : msf)
+			print(output, "\tid{}=={}===id{}\n", origin, weight, exit);
+		for (cauto& [origin, exit, weight] : all_edges)
+			if (not msf.contains({ origin, exit, weight }))
+				print(output, "\tid{}--{}---id{}\n", origin, weight, exit);
+		print(output, "```");
 	}
 };
 
