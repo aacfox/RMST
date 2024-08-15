@@ -190,13 +190,13 @@ public:
 		edge_set msf{ from_range, mst() };
 		print(output, "```mermaid\ngraph LR;\n");
 		for (cauto id : views::iota(0ull, fresh_id()))
-			print(output, "id{}(({})) ", id, id);
+			print(output, "{}(({})); ", id, id);
 		print(output, "\n");
 		for (cauto& [origin, exit, weight] : msf)
-			print(output, "\tid{}=={}===id{}\n", origin, weight, exit);
+			print(output, "\t{}=={}==={}\n", origin, weight, exit);
 		for (cauto& [origin, exit, weight] : all_edges)
 			if (not msf.contains({ origin, exit, weight }))
-				print(output, "\tid{}--{}---id{}\n", origin, weight, exit);
+				print(output, "\t{}-.{}..-{}\n", origin, weight, exit);
 		print(output, "```");
 	}
 };
