@@ -5,7 +5,7 @@ The subroutines, as the authors divided algorithm into and further divided by me
   - [x] `contracting cycle`
   - [x] lambda `trim_selfs_redundants()`
 - [x] `extracting random sample cycle`
-- [ ] lambda `erase_f_heavies()` — the exact place I seek help for. Has empty body so far.
+- [ ] lambda `erase_f_heavies()` — ***THE EXACT PLACE I SEEK FOR HELP***. Pleaase, help Dora...
 - [x] lambda `rmst()`
 - [x] `mst()` member function
 
@@ -29,4 +29,5 @@ graph LR
   1-. 1 ..-3
   2-- 0 ---3
 ```
-Very pretty, isn't it?? SHUT UP ITS PRETTY. And it fulfills the task: you can see all edges, nodes, their weights, and distinct easily edges included by the algo in MST and not included.
+Very pretty, isn't it?? SHUT UP ITS PRETTY. And it fulfills the task: you can see all edges, nodes, their weights, and distinguish easily edges included and not included into MST by the algo.  
+## 
