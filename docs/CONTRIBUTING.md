@@ -16,7 +16,7 @@ Every subroutine, imho, deserves its own section with eleborate description of h
 Every test case are made of two files: one with `.csv` extension, one with `.mm`.  
 `.csv` files [was already explained.](../README.md#limitations-so-far).  As for `.mm`, it stands for `mermaid` — diagramm creating language, including graphs.  
 Don't worry! Nothing for you to learn. `Graph` already has a member function `mermaid()` dedicated to producing such files.  
-Their contained code properly pasted in `.md` files will render pretty graph! One of very few mean to visualize graphs.
+Their contained code properly pasted in `.md` files will render a pretty graph! One of very few mean to visualize graphs.
 
 ## Example
 Given graph: {{0;1;0}, {0;2;1}, {1;2;0}, {1;3;1}, {2;3;0}}. Its appearance:  
