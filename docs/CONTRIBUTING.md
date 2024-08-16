@@ -29,5 +29,5 @@ graph LR
   1-. 1 ..-3
   2-- 0 ---3
 ```
-Very pretty, isn't it?? SHUT UP ITS PRETTY. And it fulfills the task: you can see all edges, nodes, their weights, and distinguish easily edges included and not included into MST by the algo.  
+Very pretty, isn't it?? SHUTUPITSPRETTY. ~~For a smoker's graph?.. Probably.~~ And it fulfills the task: you can see all edges, nodes, their weights, and distinguish easily edges included and not included into MST by the algo.  
 ## 
