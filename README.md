@@ -11,18 +11,21 @@ In the wild, there exist other deadly cool algos for the same purpose (which is 
 Eats graph, poos its MSF[^1] in the same format!  
 
 ### Limitations so far  
-[The program](./UI.exe) supports only input files with `.csv` extension and formatted as ***edge list*** with ***semicolon*** as a delimiter and ***integral*** weights. See [example](./docs/wikipedia_graph.csv). To fulfill more complicated tasks source code provides more powerful tools not included in the executable ~~'cause of my lazy ass~~ to keep things simple and focus resources of humankind on [much bigger problem](./docs/CONTRIBUTING.md#tasks).  
+[The program](./mst_generator.exe) supports only input files with `.csv` extension and formatted as ***edge list*** with ***semicolon*** as a delimiter and ***integral*** weights. See [example](./docs/wikipedia_graph.csv). To fulfill more complicated tasks source code provides more powerful tools not included in the executable ~~'cause of my lazy ass~~ to keep things simple and focus resources of humankind on [much bigger problem](./docs/CONTRIBUTING.md#tasks).  
 
 ## Get started
 The simplest case:
-1. Place [program](./UI.exe) AND your input files in the same folder (if you want them processed at once), or COPY a path to the desired location to the clipboard (to process files one by one)
-2. Run program
-   * If you chose the first option press consequently `2`, then `Enter`.  
-     Proceed to the final step.  
+1. Place [program](./mst_generator.exe) AND your input files in the same folder or COPY a path to the desired location to the clipboard  
+2. Run program.
+   * If you chose the first option, proceed to step 3.
    * Otherwise press `1`, `Enter`, paste the path from the clipboard, `Enter`.  
-     If the message "Success!" popped, proceed to the next step.
-3. Press `3`, `Enter`, `0`, `Enter`. A list of found files should show up.
-4. Enter the index of the desired file.
+     If the message "Success!" popped, press `3`, then `Enter`.
+3. If you want to proccess all found files at once:
+  * press `2`, `Enter`.
+  * proceed to step 4.
+4. Otherwise to process one by one:
+  * press `0`, `Enter`. A list of found files should show up.
+  * enter the index of the desired file, press `Enter`
 5. Enjoy the results! For a proper and safe exit from the program enter `-1`.  
    p.s. just kidding, you may as well just throw your device out of the window
 
@@ -46,7 +49,7 @@ Check [source code](./graph.cpp) for the full signature and documentation.
 ***The imple is self-contained. No third-party library is required.***  
 As per below is just a description of the internal relations.
 * [boilerplate.cpp](./boilerplate.cpp) is self-explanatory. Contains a bunch of utils, and in the common case should not pique any of your interest, as I tried to name those utils properly. If any confusion arises, check it to understand, what one or the other does. This module imported in every other file.
-* [main.cpp](./main.cpp) — driver code; look at how UI.exe is built from the inside. Depends on the other both.
+* [main.cpp](./main.cpp) — driver code; look at how mst_generator.exe is built from the inside. Depends on the other both.
   
 ## References
 ### Randomized O(m) MST algo
