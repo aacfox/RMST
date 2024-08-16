@@ -11,8 +11,8 @@ In the wild, there exist other deadly cool algos for the same purpose (which is 
 Eats graph, poos its MSF[^1] in the same format!  
 
 ### Limitations so far  
-[The program](./UI.exe) supports only input files with `.csv` extension and formatted as ***edge list*** with ***semicolon*** as a delimiter and ***integral*** weights. See [example](./docs/wikipedia_graph.csv). To fulfill more complicated tasks source code provides more powerful tools not included in the executable ~~'cause of my lazy ass~~ to keep things simple and focus resources of humankind on [much bigger problem]().
-<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! EMPTY LINK ABOVE -->
+[The program](./UI.exe) supports only input files with `.csv` extension and formatted as ***edge list*** with ***semicolon*** as a delimiter and ***integral*** weights. See [example](./docs/wikipedia_graph.csv). To fulfill more complicated tasks source code provides more powerful tools not included in the executable ~~'cause of my lazy ass~~ to keep things simple and focus resources of humankind on [much bigger problem](./docs/CONTRIBUTING.md#tasks).  
+
 ## Get started
 The simplest case:
 1. Place [program](./UI.exe) AND your input files in the same folder (if you want them processed at once), or COPY a path to the desired location to the clipboard (to process files one by one)
