@@ -33,3 +33,4 @@
 *.exe
 *.out
 *.app
+!UI.exe
