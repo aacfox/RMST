@@ -19,7 +19,7 @@ Don't worry! Nothing for you to learn. `Graph` already has a member function `me
 Their contained code properly pasted in `.md` files will render a pretty graph! One of very few mean to visualize graphs.
 
 ## Example
-Given graph: {{0;1;0}, {0;2;1}, {1;2;0}, {1;3;1}, {2;3;0}}. Its appearance:  
+Given graph formatted as {origin, destination, weight}: {{0;1;0}, {0;2;1}, {1;2;0}, {1;3;1}, {2;3;0}, {0;3;1}}. Its appearance:  
 ```mermaid
 graph LR
   0((0)); 1((1)); 2((2)); 3((3))
@@ -28,6 +28,7 @@ graph LR
   1-- 0 ---2
   1-. 1 ..-3
   2-- 0 ---3
+  1-. 1 ..-3
 ```
 Very pretty, isn't it?? SHUTUPITSPRETTY. ~~For a smoker's graph?.. Probably.~~ And it fulfills the task: you can see all edges, nodes, their weights, and distinguish easily edges included and not included into MST by the algo.  
 ## 
