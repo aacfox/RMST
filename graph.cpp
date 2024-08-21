@@ -13,23 +13,23 @@ public:
 		bool operator==(const Edge&) const = default;
 		auto operator<=>(const Edge& other) const { return weight <=> other.weight; }
 	};
-	using edge_set = unordered_set < Edge, decltype([](cauto& edge) noexcept {
-		return hash<size_t>{}(edge.origin) ^ hash<size_t>{}(edge.exit); }),
-		decltype([](cauto& x, cauto& y) {
-		if (x.weight == y.weight and (x.origin ^ y.origin == x.exit ^ y.exit))
-			return true; else return false; }) > ;
 private:
 	size_t _fresh_id{ max_v<size_t> };
 	vector<Edge> _edge_list;
+	using edge_set = unordered_set < Edge, decltype([](cauto& edge) noexcept {
+		return hash<size_t>{}(edge.origin) ^ hash<size_t>{}(edge.exit); }),
+		decltype([](cauto& x, cauto& y) {
+		if (x.weight == y.weight and ((x.origin ^ y.origin) == (x.exit ^ y.exit)))
+			return true; else return false; }) > ;
 public:
 	Graph() = default;
 	Graph(auto&& edges): _edge_list{ forward_like<decltype(_edge_list)>(edges) } {
 		_fresh_id = ranges::max(_edge_list, {}, [](cauto& x) {return max(x.origin, x.exit); });
 	}
-	template<ranges::range Grid, class Pred = ranges::equal_to> requires
-		requires (Grid grid, Pred pred) {
-		ranges::begin(grid[0]);
-		{ pred(grid[0][0], grid[0][0]) } -> convertible_to<bool>;
+	template<ranges::random_access_range Grid, class Pred = ranges::equal_to>
+		requires requires (Grid grid, Pred pred) {
+			{ ranges::begin(grid[0]) }->random_access_iterator;
+			{ pred(grid[0][0], grid[0][0]) } -> convertible_to<bool>;
 	}
 	static Graph from_grid(Grid&& grid, Pred pred = {}) {
 		Graph graph;
@@ -84,7 +84,8 @@ public:
 		using Supernode = bitset<Maximum_vertices>;
 		//TL;DR above: graph is interpreted as undirected
 		using edge_multimap = unordered_multimap<Supernode, Edge>;
-		if (Maximum_vertices < fresh_id()) throw length_error("Default template argument for number of vertices (which is 1024) proved insufficient.");
+		if (Maximum_vertices < fresh_id()) throw Exception{
+			"Default template argument for number of vertices (which is 1024) proved insufficient." };
 		edge_multimap edges{}; //bitset-based hash map for easier node combining
 		vector<Supernode> supernodes(fresh_id()); //vector for tracking remaining supernodes
 		vector nodes(fresh_id(), supernodes.end()); //disjoint set of original nodes
