@@ -25,6 +25,24 @@
 var NAVTREE =
 [
   [ "RMST", "index.html", [
+    [ "Introduction", "index.html#autotoc_md5", null ],
+    [ "What it does", "index.html#autotoc_md6", [
+      [ "Limitations so far", "index.html#autotoc_md7", null ]
+    ] ],
+    [ "Get started", "index.html#autotoc_md8", [
+      [ "The algorithm's source code", "index.html#autotoc_md9", null ],
+      [ "Dependencies", "index.html#autotoc_md10", null ]
+    ] ],
+    [ "References", "index.html#autotoc_md11", [
+      [ "Randomized O(m) MST algo", "index.html#autotoc_md12", null ],
+      [ "Other cool MST algos", "index.html#autotoc_md13", null ]
+    ] ],
+    [ "Tasks", "md_docs_2CONTRIBUTING.html", [
+      [ "Test cases", "md_docs_2CONTRIBUTING.html#autotoc_md1", [
+        [ "Example", "md_docs_2CONTRIBUTING.html#autotoc_md2", null ],
+        [ "autotoc_md3", "md_docs_2CONTRIBUTING.html#autotoc_md3", null ]
+      ] ]
+    ] ],
     [ "Modules", "modules.html", [
       [ "Modules List", "modules.html", "modules_dup" ],
       [ "Module Members", "modulemembers.html", [
@@ -70,7 +88,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"namespaceboil_1_1utilities.html#a9c7890de676a91e0b5c666dd06a37ad3"
+"namespaceboil_1_1utilities.html#a4602626943325a0ca078e5a113c06d51"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,11 +1,12 @@
 var searchData=
 [
-  ['o_5fclock_0',['o_clock',['../namespaceboil_1_1utilities.html#a993d135bb2169e9db5278880d9d7e7d5',1,'boil::o_clock()'],['../namespaceboil_1_1utilities.html#a993d135bb2169e9db5278880d9d7e7d5',1,'boil::utilities::o_clock()']]],
-  ['ok_1',['ok',['../classboil_1_1classes_1_1Combination.html#ac6cb6ddb175bbe3f9c7d7f2bfd19006d',1,'boil::classes::Combination']]],
-  ['operator_2a_2',['operator*',['../classboil_1_1classes_1_1Combination.html#a753b06e9e45784eaa42a61072a7e9e87',1,'boil::classes::Combination']]],
-  ['operator_2b_2b_3',['operator++',['../classboil_1_1classes_1_1Combination.html#abf9e8ffd2e3cacb04be0584eec66984b',1,'boil::classes::Combination']]],
-  ['operator_3c_3d_3e_4',['operator&lt;=&gt;',['../structGraph_1_1Edge.html#a2d2f39e86602ee2867789a3accadb419',1,'Graph::Edge']]],
-  ['operator_3d_3d_5',['operator==',['../structGraph_1_1Edge.html#a111a7651f4f6cbef8e04108c7ed58555',1,'Graph::Edge']]],
-  ['order_6',['order',['../namespaceboil_1_1utilities.html#a9a0f42ff93c5f580e2246ac5fa24617a',1,'boil::order'],['../namespaceboil_1_1utilities.html#a9a0f42ff93c5f580e2246ac5fa24617a',1,'boil::utilities::order']]],
-  ['origin_7',['origin',['../structGraph_1_1Edge.html#a2fec859a16640d6f48d781f362a9449e',1,'Graph::Edge']]]
+  ['m_20mst_20algo_0',['Randomized O(m) MST algo',['../index.html#autotoc_md12',1,'']]],
+  ['main_1',['main',['../module_main.html',1,'main module'],['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;main.cpp']]],
+  ['main_2ecpp_2',['main.cpp',['../main_8cpp.html',1,'']]],
+  ['max_5fv_3',['max_v',['../namespaceboil_1_1utilities.html#a65c959a85f6327c153814441e08c2756',1,'boil::max_v'],['../namespaceboil_1_1utilities.html#a65c959a85f6327c153814441e08c2756',1,'boil::utilities::max_v']]],
+  ['mermaid_4',['mermaid',['../classGraph.html#a13c4fe6e7b3153ee2fa2a6d79838edfa',1,'Graph']]],
+  ['min_5fv_5',['min_v',['../namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c',1,'boil::min_v'],['../namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c',1,'boil::utilities::min_v']]],
+  ['mst_6',['mst',['../classGraph.html#a3601c6a236196c427f9fc475eacf57bb',1,'Graph']]],
+  ['mst_20algo_7',['Randomized O(m) MST algo',['../index.html#autotoc_md12',1,'']]],
+  ['mst_20algos_8',['Other cool MST algos',['../index.html#autotoc_md13',1,'']]]
 ];

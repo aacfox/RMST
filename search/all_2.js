@@ -1,8 +1,14 @@
 var searchData=
 [
-  ['cauto_0',['cauto',['../boilerplate_8cpp.html#a8f438fe31579af4c0a3d9c169da09021',1,'cauto:&#160;boilerplate.cpp'],['../graph_8cpp.html#a8f438fe31579af4c0a3d9c169da09021',1,'cauto:&#160;graph.cpp'],['../main_8cpp.html#a8f438fe31579af4c0a3d9c169da09021',1,'cauto:&#160;main.cpp']]],
-  ['cbegin_1',['cbegin',['../classGraph.html#a357809e14f80ad72bd3d007b37d77e05',1,'Graph']]],
-  ['cend_2',['cend',['../classGraph.html#add1a0288b625e7faef730b21dc50a1f8',1,'Graph']]],
-  ['combination_3',['combination',['../classboil_1_1classes_1_1Combination.html',1,'boil::classes::Combination'],['../classboil_1_1classes_1_1Combination.html',1,'boil::Combination'],['../classboil_1_1classes_1_1Combination.html#a012f81fa840966543a9cc4a58d4b0a9c',1,'boil::classes::Combination::Combination(size_t, size_t)'],['../classboil_1_1classes_1_1Combination.html#a53deae884c0edaa2a5080880f055f790',1,'boil::classes::Combination::Combination(R range, size_t k)']]],
-  ['create_5ffile_4',['create_file',['../namespaceboil_1_1utilities.html#a4602626943325a0ca078e5a113c06d51',1,'boil::create_file()'],['../namespaceboil_1_1utilities.html#a4602626943325a0ca078e5a113c06d51',1,'boil::utilities::create_file()']]]
+  ['begin_0',['begin',['../classGraph.html#ae41ba9615a81eb418c5670d40881d7b2',1,'Graph']]],
+  ['benchmark_1',['benchmark',['../namespaceboil_1_1functions.html#a067c52dcfa8ff1745041d2e243ae3439',1,'boil::benchmark()'],['../namespaceboil_1_1functions.html#a067c52dcfa8ff1745041d2e243ae3439',1,'boil::functions::benchmark()']]],
+  ['boil_2',['boil',['../namespaceboil.html',1,'']]],
+  ['boil_3a_3aclasses_3',['classes',['../namespaceboil_1_1classes.html',1,'boil']]],
+  ['boil_3a_3afunctions_4',['functions',['../namespaceboil_1_1functions.html',1,'boil']]],
+  ['boil_3a_3autilities_5',['utilities',['../namespaceboil_1_1utilities.html',1,'boil']]],
+  ['boil_3a_3autilities_3a_3aarithmetic_6',['arithmetic',['../conceptboil_1_1utilities_1_1arithmetic.html',1,'boil::utilities']]],
+  ['boilerplate_7',['boilerplate',['../module_boilerplate.html',1,'']]],
+  ['boilerplate_2ecpp_8',['boilerplate.cpp',['../boilerplate_8cpp.html',1,'']]],
+  ['boruvka_5fgeeksforgeeks_2ecsv_9',['boruvka_geeksforgeeks.csv',['../boruvka__geeksforgeeks_8csv.html',1,'']]],
+  ['boruvka_5fgeeksforgeeks_2emm_10',['boruvka_geeksforgeeks.mm',['../boruvka__geeksforgeeks_8mm.html',1,'']]]
 ];

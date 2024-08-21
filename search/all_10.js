@@ -1,13 +1,7 @@
 var searchData=
 [
-  ['weight_0',['weight',['../structGraph_1_1Edge.html#ae0bd6e614e5db65da1708957af5607eb',1,'Graph::Edge']]],
-  ['what_1',['what',['../classboil_1_1classes_1_1Exception.html#a275be9f331ce3acfb85bd6d7bf48da78',1,'boil::classes::Exception']]],
-  ['when_2',['when',['../classboil_1_1classes_1_1Exception.html#a1fd67224f0764f45b11cff42ab2115b0',1,'boil::classes::Exception']]],
-  ['where_3',['where',['../classboil_1_1classes_1_1Exception.html#a0d51ef0e7016aaedba6e1ce034aff686',1,'boil::classes::Exception']]],
-  ['wikipedia_5fgraph_2ecsv_4',['wikipedia_graph.csv',['../wikipedia__graph_8csv.html',1,'']]],
-  ['wikipedia_5fgraph_2emm_5',['wikipedia_graph.mm',['../wikipedia__graph_8mm.html',1,'']]],
-  ['with_5fnegatives_2ecsv_6',['with_negatives.csv',['../with__negatives_8csv.html',1,'']]],
-  ['with_5fnegatives_2emm_7',['with_negatives.mm',['../with__negatives_8mm.html',1,'']]],
-  ['with_5fselfloops_5fredundants_2ecsv_8',['with_selfloops_redundants.csv',['../with__selfloops__redundants_8csv.html',1,'']]],
-  ['with_5fselfloops_5fredundants_2emm_9',['with_selfloops_redundants.mm',['../with__selfloops__redundants_8mm.html',1,'']]]
+  ['tasks_0',['Tasks',['../md_docs_2CONTRIBUTING.html',1,'']]],
+  ['test_20cases_1',['Test cases',['../md_docs_2CONTRIBUTING.html#autotoc_md1',1,'']]],
+  ['the_20algorithm_20s_20source_20code_2',['The algorithm&apos;s source code',['../index.html#autotoc_md9',1,'']]],
+  ['today_3',['today',['../namespaceboil_1_1utilities.html#af3feae0c9cbba27fea45a0e9d363b589',1,'boil::today()'],['../namespaceboil_1_1utilities.html#af3feae0c9cbba27fea45a0e9d363b589',1,'boil::utilities::today()']]]
 ];

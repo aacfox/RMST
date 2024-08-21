@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['randomizer_0',['randomizer',['../namespaceboil_1_1functions.html#a4887adf42671c9c0dccadc52487fd547',1,'boil::randomizer()'],['../namespaceboil_1_1functions.html#a4887adf42671c9c0dccadc52487fd547',1,'boil::functions::randomizer()']]],
-  ['restore_1',['restore',['../classboil_1_1classes_1_1Combination.html#aff8e2c88fd9cab0de141c9ac597931f5',1,'boil::classes::Combination']]]
+  ['now_0',['now',['../namespaceboil_1_1utilities.html#ac5ba0fa8b8a1c6fd68999ad33431dfc9',1,'boil::now'],['../namespaceboil_1_1utilities.html#ac5ba0fa8b8a1c6fd68999ad33431dfc9',1,'boil::utilities::now']]]
 ];
