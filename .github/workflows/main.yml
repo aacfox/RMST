@@ -32,8 +32,8 @@ jobs:
         # Working directory
         working-directory: "." # default is .
     
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
+    - name: Github Pages Action
+      uses: peaceiris/actions-gh-pages@v4.0.0
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./html
