@@ -21,6 +21,7 @@ private:
 		decltype([](cauto& x, cauto& y) {
 		if (x.weight == y.weight and ((x.origin ^ y.origin) == (x.exit ^ y.exit)))
 			return true; else return false; }) > ;
+	///TL;DR above: graph is interpreted as undirected
 public:
 	Graph() = default;
 	Graph(auto&& edges): _edge_list{ forward_like<decltype(_edge_list)>(edges) } {
@@ -82,36 +83,40 @@ public:
 	auto cend() const noexcept { return _edge_list.cend(); }
 	template <size_t Maximum_vertices = 1024> Graph mst() const {
 		using Supernode = bitset<Maximum_vertices>;
-		//TL;DR above: graph is interpreted as undirected
 		using edge_multimap = unordered_multimap<Supernode, Edge>;
 		if (Maximum_vertices < fresh_id()) throw Exception{
 			"Default template argument for number of vertices (which is 1024) proved insufficient." };
-		edge_multimap edges{}; //bitset-based hash map for easier node combining
-		vector<Supernode> supernodes(fresh_id()); //vector for tracking remaining supernodes
-		vector nodes(fresh_id(), supernodes.end()); //disjoint set of original nodes
-		//the latter two can be interpreted as nonoptimized-memory-wise hash_maps 
-		//vertice_ID -> respective_type
+		edge_multimap edges{}; ///< bitset-based hash map for easier node combining
+		vector<Supernode> supernodes(fresh_id()); ///< vector for tracking remaining supernodes
+		///disjoint set of original nodes
+		vector nodes(fresh_id(), supernodes.end()); /**< the latter two can be interpreted as nonoptimized-memory-wise hash_maps
+		vertice_ID -> respective_type
+		*/
 		for (auto i{ this->cbegin() }; i != this->cend(); ++i) {
 			supernodes[i->origin].set(i->origin);
 			nodes[i->origin] = supernodes.begin() + i->origin;
 			edges.emplace(supernodes[i->origin], *i);
 		}
 		auto iter{ edges.cend() }, sentinel{ iter };
-		//this is one of the subroutines of boruvka(); should be used once
-		//on the original graph, incase it contains self loops or redundant edges
+		///one of the subroutines of boruvka()
+		/**
+		should be used once on the original graph,
+		incase it already contains self loops or redundant edges
+		\throws Exception which excepts
+		*/
 		auto trim_selfs_redundants = [&](edge_multimap& some_edges) {
 			for (unordered_map<Supernode, decltype(iter)> connections;
 				  cauto & supernode : supernodes
 				  | views::filter([](cauto& x) { return x.any(); }))
 				for (tie(iter, sentinel) = some_edges.equal_range(supernode);
 					  iter != sentinel;) {
-				if (supernode[iter->second.exit]) { //i.e. a self-loop
+				if (supernode[iter->second.exit]) { ///i.e. a self-loop
 					some_edges.erase(iter++);
 					continue;
-				} //else check if the edge's redundant. For that,
-				  // firstly, check if the connection wasn't considered before yet or was already.
+				} ///else check if the edge's redundant. For that,
+				  /// firstly, check if the connection wasn't considered before yet or was already.
 				if (auto connected{ connections.find(*nodes[iter->second.exit]) };
-					 connected == connections.cend())//first case
+					 connected == connections.cend())///first case
 					connections[supernode] = iter++;
 				else if (iter->second.weight < connected->second->second.weight)
 					some_edges.erase(exchange(connected->second, iter++));
@@ -120,12 +125,12 @@ public:
 			}
 		};
 		trim_selfs_redundants(edges);
-		//The actual Randomized Expected Linear-time MST algorithm:
+		///The actual Randomized Expected Linear-time MST algorithm:
 		auto rmst = [&](this auto self, edge_multimap& input) {
 			edge_set boruvkas{};
 			auto boruvka = [&]() {
 				edge_set buffer{};
-				//choosing-incident-edges cycle:
+				///choosing-incident-edges cycle:
 				for (auto lightest{ iter }; cauto & node : supernodes
 					  | views::filter([](cauto& x) { return x.any(); })) {
 					tie(iter, sentinel) = input.equal_range(node);
@@ -133,7 +138,7 @@ public:
 						return x.second.weight < y.second.weight; });
 					if (lightest != sentinel) buffer.insert(input.extract(lightest).mapped());
 				}
-				//contracting cycle:
+				///contracting cycle:
 				for (auto absorbing{ supernodes.end() }, absorbed{ absorbing };
 					  cauto & edge : buffer) {
 					absorbing = nodes[edge.origin];
@@ -159,16 +164,19 @@ public:
 				boruvkas.merge(buffer);
 				trim_selfs_redundants(input);
 			};
-			auto erase_f_heavies = [&](const edge_set& forest) { //probable signature
-				//perform some magic modificated linear time mst verification algo 
-				//for deleting F_heavy edges from contracted graph,
-				//given the forest of its subgraph
+			///probable signature
+			/**
+			perform some magic modificated linear time mst verification algo
+			for deleting F_heavy edges from contracted graph,
+			given the forest of its subgraph
+			*/
+			auto erase_f_heavies = [&](const edge_set& forest) {
 			};
 			if (input.empty()) return edge_set{};
 			boruvka();
 			boruvka();
 			edge_multimap subgraph;
-			subgraph.reserve(input.bucket_count()); //to prevent rehashing
+			subgraph.reserve(input.bucket_count()); ///to prevent rehashing
 			for (auto yes_no{ randomizer(0, 1) }; cauto edge : input)
 				if (yes_no()) subgraph.emplace(move(edge));
 			erase_f_heavies(self(subgraph));
@@ -176,7 +184,7 @@ public:
 			return boruvkas;
 		};
 		edge_set mst_edges{ rmst(edges) };
-		Graph mst; //time to restore invariants:
+		Graph mst; ///time to restore invariants:
 		mst._fresh_id = _fresh_id;
 		for (mst._edge_list.reserve(2 * mst_edges.size());
 			  auto & edge: mst_edges) {
