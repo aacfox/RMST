@@ -1,8 +1,10 @@
 # Prerequisites
 *.d
 
-# Visual Studio 
+# Directories
 .vs/
+html/
+latex/
 
 # Compiled Object files
 *.slo
