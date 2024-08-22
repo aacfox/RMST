@@ -82,9 +82,7 @@ public:
 	auto end() noexcept { return _edge_list.end(); }
 	auto cend() const noexcept { return _edge_list.cend(); }
 	/// The very mst!
-	/** Something very important before going specific
- 	\tparam f f djdfjsjfdsdsjffjds
-  	*/
+	/** Something very important before going specific */
 	template <size_t Maximum_vertices = 1024> Graph mst() const {
 		using Supernode = bitset<Maximum_vertices>;
 		using edge_multimap = unordered_multimap<Supernode, Edge>;
@@ -210,6 +208,10 @@ public:
 		}
 		return mst;
 	}
+	/// exporter
+	/**
+		i have some doubts
+	*/
 	template<class T> requires derived_from<remove_cvref_t<T>, ostream>
 	void mermaid(T&& output) const {
 		edge_set all_edges(cbegin(), cend());
