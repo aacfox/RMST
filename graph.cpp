@@ -82,7 +82,9 @@ public:
 	auto end() noexcept { return _edge_list.end(); }
 	auto cend() const noexcept { return _edge_list.cend(); }
 	/// The very mst!
-	/** Something very important before going specific */
+	/** 
+ 		Something very important before going specific 
+  */
 	template <size_t Maximum_vertices = 1024> Graph mst() const {
 		using Supernode = bitset<Maximum_vertices>;
 		using edge_multimap = unordered_multimap<Supernode, Edge>;
