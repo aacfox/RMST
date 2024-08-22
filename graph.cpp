@@ -98,9 +98,9 @@ public:
 			edges.emplace(supernodes[i->origin], *i);
 		}
 		auto iter{ edges.cend() }, sentinel{ iter };
-		///one of the subroutines of boruvka()
-		/**
-		should be used once on the original graph,
+		/** \memberof mst
+  		trim_selfs_redundants One of the subroutines of boruvka()
+		Should be used once on the original graph,
 		incase it already contains self loops or redundant edges
 		\throws Exception which excepts
 		*/
@@ -125,12 +125,19 @@ public:
 			}
 		};
 		trim_selfs_redundants(edges);
-		///The actual Randomized Expected Linear-time MST algorithm:
+		/** \relates Graph 
+  		The actual Randomized Expected Linear-time MST algorithm
+    		*/
 		auto rmst = [&](this auto self, edge_multimap& input) {
 			edge_set boruvkas{};
+			/** \relates mst()
+   			Modificated boruvka algo.
+   			*/
 			auto boruvka = [&]() {
 				edge_set buffer{};
-				///choosing-incident-edges cycle:
+				/** \section first_cycle choosing-incident-edges cycle
+    				Nothing to add... Explore imple
+				*/
 				for (auto lightest{ iter }; cauto & node : supernodes
 					  | views::filter([](cauto& x) { return x.any(); })) {
 					tie(iter, sentinel) = input.equal_range(node);
@@ -138,13 +145,18 @@ public:
 						return x.second.weight < y.second.weight; });
 					if (lightest != sentinel) buffer.insert(input.extract(lightest).mapped());
 				}
-				///contracting cycle:
+				/** \subsection contracting cycle:
+    				Yet another subroutine
+				*/
 				for (auto absorbing{ supernodes.end() }, absorbed{ absorbing };
 					  cauto & edge : buffer) {
 					absorbing = nodes[edge.origin];
 					absorbed = nodes[edge.exit];
 					if (auto [combined, changing] = tuple{ *absorbing | *absorbed,
 						 edge_multimap{} }; absorbing != absorbed) {
+						/** \memberof mst()
+      						fdfdfdfdfd
+	    					*/
 						auto update_keys = [&](cauto& node) {
 							for (tie(iter, sentinel) = input.equal_range(node); iter != sentinel;) {
 								auto temp{ input.extract(iter++) };
@@ -164,11 +176,10 @@ public:
 				boruvkas.merge(buffer);
 				trim_selfs_redundants(input);
 			};
-			///probable signature
-			/**
-			perform some magic modificated linear time mst verification algo
-			for deleting F_heavy edges from contracted graph,
-			given the forest of its subgraph
+			/** \paragraph erase_f_heavies Erase_f_heavies() subroutine
+			Should perform some magic modificated linear time mst verification algo
+			for deleting F_heavy edges from contracted graph, given the forest of its subgraph
+   			\throws AnotherExc that throws differently
 			*/
 			auto erase_f_heavies = [&](const edge_set& forest) {
 			};
