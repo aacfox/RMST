@@ -8,5 +8,6 @@ var searchData=
   ['min_5fv_5',['min_v',['../namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c',1,'boil::min_v'],['../namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c',1,'boil::utilities::min_v']]],
   ['mst_6',['mst',['../classGraph.html#a12097d8663f59a30500f623d5f46325f',1,'Graph']]],
   ['mst_20algo_7',['Randomized O(m) MST algo',['../index.html#autotoc_md12',1,'']]],
-  ['mst_20algos_8',['Other cool MST algos',['../index.html#autotoc_md13',1,'']]]
+  ['mst_20algos_8',['Other cool MST algos',['../index.html#autotoc_md13',1,'']]],
+  ['mstsubroutine_9',['mstsubroutine',['..//github/workspace/graph.cpp#mst',1,'']]]
 ];
