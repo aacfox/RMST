@@ -12,7 +12,7 @@ var classGraph =
     [ "from_csv", "classGraph.html#a79f5662987d8c62edd32365406bffcaa", null ],
     [ "from_grid", "classGraph.html#ab7ca595c41bf323d1a71b705f82442c7", null ],
     [ "mermaid", "classGraph.html#a13c4fe6e7b3153ee2fa2a6d79838edfa", null ],
-    [ "mst", "classGraph.html#a3601c6a236196c427f9fc475eacf57bb", null ],
+    [ "mst", "classGraph.html#a12097d8663f59a30500f623d5f46325f", null ],
     [ "_edge_list", "classGraph.html#a439e6967e727cb7d4ff7d2ad63b20fc9", null ],
     [ "_fresh_id", "classGraph.html#a0d4a749a0bd60c5a4c3d4303dc086970", null ]
 ];
