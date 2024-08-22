@@ -81,6 +81,10 @@ public:
 	auto cbegin() const noexcept { return _edge_list.cbegin(); }
 	auto end() noexcept { return _edge_list.end(); }
 	auto cend() const noexcept { return _edge_list.cend(); }
+	/// The very mst!
+	/** Something very important before going specific
+ 	\tparam f f djdfjsjfdsdsjffjds
+  	*/
 	template <size_t Maximum_vertices = 1024> Graph mst() const {
 		using Supernode = bitset<Maximum_vertices>;
 		using edge_multimap = unordered_multimap<Supernode, Edge>;
@@ -98,7 +102,7 @@ public:
 			edges.emplace(supernodes[i->origin], *i);
 		}
 		auto iter{ edges.cend() }, sentinel{ iter };
-		/** \memberof mst
+		/** \memberof Graph
   		trim_selfs_redundants One of the subroutines of boruvka()
 		Should be used once on the original graph,
 		incase it already contains self loops or redundant edges
@@ -154,8 +158,9 @@ public:
 					absorbed = nodes[edge.exit];
 					if (auto [combined, changing] = tuple{ *absorbing | *absorbed,
 						 edge_multimap{} }; absorbing != absorbed) {
-						/** \memberof mst()
-      						fdfdfdfdfd
+						/** \subsubsection mst mstsubroutine
+      						Meow meow meow
+      						\throws Something terrible
 	    					*/
 						auto update_keys = [&](cauto& node) {
 							for (tie(iter, sentinel) = input.equal_range(node); iter != sentinel;) {
@@ -176,7 +181,8 @@ public:
 				boruvkas.merge(buffer);
 				trim_selfs_redundants(input);
 			};
-			/** \paragraph erase_f_heavies Erase_f_heavies() subroutine
+			/** 
+   			\paragraph erase_f_heavies Erase_f_heavies() subroutine
 			Should perform some magic modificated linear time mst verification algo
 			for deleting F_heavy edges from contracted graph, given the forest of its subgraph
    			\throws AnotherExc that throws differently
