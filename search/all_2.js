@@ -9,8 +9,7 @@ var searchData=
   ['boil_3a_3autilities_3a_3aarithmetic_6',['arithmetic',['../conceptboil_1_1utilities_1_1arithmetic.html',1,'boil::utilities']]],
   ['boilerplate_7',['boilerplate',['../module_boilerplate.html',1,'']]],
   ['boilerplate_2ecpp_8',['boilerplate.cpp',['../boilerplate_8cpp.html',1,'']]],
-  ['boruvka_9',['one of the subroutines of boruvka()',['..//github/workspace/graph.cpp#trim',1,'']]],
-  ['boruvka_20s_20subroutine_20test_10',['Boruvka&apos;s subroutine test',['../md_docs_2CONTRIBUTING.html#autotoc_md3',1,'']]],
-  ['boruvka_5fgeeksforgeeks_2ecsv_11',['boruvka_geeksforgeeks.csv',['../boruvka__geeksforgeeks_8csv.html',1,'']]],
-  ['boruvka_5fgeeksforgeeks_2emm_12',['boruvka_geeksforgeeks.mm',['../boruvka__geeksforgeeks_8mm.html',1,'']]]
+  ['boruvka_20s_20subroutine_20test_9',['Boruvka&apos;s subroutine test',['../md_docs_2CONTRIBUTING.html#autotoc_md3',1,'']]],
+  ['boruvka_5fgeeksforgeeks_2ecsv_10',['boruvka_geeksforgeeks.csv',['../boruvka__geeksforgeeks_8csv.html',1,'']]],
+  ['boruvka_5fgeeksforgeeks_2emm_11',['boruvka_geeksforgeeks.mm',['../boruvka__geeksforgeeks_8mm.html',1,'']]]
 ];
