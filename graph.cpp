@@ -10,8 +10,10 @@ public:
 		size_t origin{};
 		size_t exit{};
 		Weight weight{ 1 };
-		bool operator==(const Edge&) const = default;
-		auto operator<=>(const Edge& other) const { return weight <=> other.weight; }
+		bool operator==(const Edge&) const = default; /**< I.e. if it comes to comparisons,
+		only full match by all three fields are considered equal*/
+		auto operator<=>(const Edge& other) const { return weight <=> other.weight; }/**<
+		but for an eaisier implementation of other algos comparisons are made only by weight*/
 	};
 private:
 	size_t _fresh_id{ max_v<size_t> };
@@ -20,8 +22,7 @@ private:
 		return hash<size_t>{}(edge.origin) ^ hash<size_t>{}(edge.exit); }),
 		decltype([](cauto& x, cauto& y) {
 		if (x.weight == y.weight and ((x.origin ^ y.origin) == (x.exit ^ y.exit)))
-			return true; else return false; }) > ;
-	///TL;DR above: graph is interpreted as undirected
+			return true; else return false; }) > ; ///< Set of type ignoring direction of edges
 public:
 	Graph() = default;
 	Graph(auto&& edges): _edge_list{ forward_like<decltype(_edge_list)>(edges) } {
@@ -32,6 +33,9 @@ public:
 			{ ranges::begin(grid[0]) }->random_access_iterator;
 			{ pred(grid[0][0], grid[0][0]) } -> convertible_to<bool>;
 	}
+	///Named ctor
+	/** \param pred — checks if the given pair of adjecent vertices should be connected
+	\throws Exceptions associated with std::allocator */
 	static Graph from_grid(Grid&& grid, Pred pred = {}) {
 		Graph graph;
 		size_t max_id{};
@@ -58,6 +62,8 @@ public:
 		graph._fresh_id = move(max_id);
 		return graph;
 	}
+	///Named ctor
+	/** \throws Exceptions associated with std::stream and std::allocator */
 	template<class T> requires derived_from<remove_cvref_t<T>, istream>
 	static Graph from_csv(T&& input) {
 		Graph graph;
@@ -81,14 +87,12 @@ public:
 	auto cbegin() const noexcept { return _edge_list.cbegin(); }
 	auto end() noexcept { return _edge_list.end(); }
 	auto cend() const noexcept { return _edge_list.cend(); }
-	/// The very mst!
-	/** 
- 		Something very important before going specific 
-  */
-	template <size_t Maximum_vertices = 1024> Graph mst() const {
-		using Supernode = bitset<Maximum_vertices>;
+	///The actual RMST
+	/** \throws boil::Exception if the last's vertex id is bigger than template parameter */
+	template <size_t vertices_upper_bound = 1024> Graph mst() const {
+		using Supernode = bitset<vertices_upper_bound>;
 		using edge_multimap = unordered_multimap<Supernode, Edge>;
-		if (Maximum_vertices < fresh_id()) throw Exception{
+		if (vertices_upper_bound < fresh_id()) throw Exception{
 			"Default template argument for number of vertices (which is 1024) proved insufficient." };
 		edge_multimap edges{}; ///< bitset-based hash map for easier node combining
 		vector<Supernode> supernodes(fresh_id()); ///< vector for tracking remaining supernodes
@@ -102,9 +106,9 @@ public:
 			edges.emplace(supernodes[i->origin], *i);
 		}
 		auto iter{ edges.cend() }, sentinel{ iter };
-		/** \memberof Graph
-  		trim_selfs_redundants One of the subroutines of boruvka()
-		Should be used once on the original graph,
+		///one of the subroutines of boruvka()
+		/**
+		should be used once on the original graph,
 		incase it already contains self loops or redundant edges
 		\throws Exception which excepts
 		*/
@@ -129,19 +133,14 @@ public:
 			}
 		};
 		trim_selfs_redundants(edges);
-		/** \relates Graph 
-  		The actual Randomized Expected Linear-time MST algorithm
-    		*/
+		/** \property The actual Randomized Expected Linear - time MST algorithm
+		* \throws Atleast tries to throw
+		* */
 		auto rmst = [&](this auto self, edge_multimap& input) {
 			edge_set boruvkas{};
-			/** \relates mst()
-   			Modificated boruvka algo.
-   			*/
 			auto boruvka = [&]() {
 				edge_set buffer{};
-				/** \section first_cycle choosing-incident-edges cycle
-    				Nothing to add... Explore imple
-				*/
+				///choosing-incident-edges cycle:
 				for (auto lightest{ iter }; cauto & node : supernodes
 					  | views::filter([](cauto& x) { return x.any(); })) {
 					tie(iter, sentinel) = input.equal_range(node);
@@ -149,19 +148,13 @@ public:
 						return x.second.weight < y.second.weight; });
 					if (lightest != sentinel) buffer.insert(input.extract(lightest).mapped());
 				}
-				/** \subsection contracting cycle:
-    				Yet another subroutine
-				*/
+				///contracting cycle:
 				for (auto absorbing{ supernodes.end() }, absorbed{ absorbing };
 					  cauto & edge : buffer) {
 					absorbing = nodes[edge.origin];
 					absorbed = nodes[edge.exit];
 					if (auto [combined, changing] = tuple{ *absorbing | *absorbed,
 						 edge_multimap{} }; absorbing != absorbed) {
-						/** \subsubsection mst mstsubroutine
-      						Meow meow meow
-      						\throws Something terrible
-	    					*/
 						auto update_keys = [&](cauto& node) {
 							for (tie(iter, sentinel) = input.equal_range(node); iter != sentinel;) {
 								auto temp{ input.extract(iter++) };
@@ -181,11 +174,11 @@ public:
 				boruvkas.merge(buffer);
 				trim_selfs_redundants(input);
 			};
-			/** 
-   			\paragraph erase_f_heavies Erase_f_heavies() subroutine
-			Should perform some magic modificated linear time mst verification algo
-			for deleting F_heavy edges from contracted graph, given the forest of its subgraph
-   			\throws AnotherExc that throws differently
+			///probable signature
+			/**
+			perform some magic modificated linear time mst verification algo
+			for deleting F_heavy edges from contracted graph,
+			given the forest of its subgraph
 			*/
 			auto erase_f_heavies = [&](const edge_set& forest) {
 			};
@@ -210,10 +203,6 @@ public:
 		}
 		return mst;
 	}
-	/// exporter
-	/**
-		i have some doubts
-	*/
 	template<class T> requires derived_from<remove_cvref_t<T>, ostream>
 	void mermaid(T&& output) const {
 		edge_set all_edges(cbegin(), cend());

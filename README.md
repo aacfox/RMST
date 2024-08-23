@@ -1,11 +1,13 @@
 # RMST
-C++ Implementation of [a randomized expected linear time MST algorithm by D. Karger et al(1995)](./README.md#randomized-om-mst-algo).
+C++ Implementation of [a randomized expected linear time MST algorithm by D. Karger et al(1995)](./README.md#randomized-om-mst-algo).  
 >[!CAUTION]
->Time complexity is currently semilinear because I'm struggling with the last of the subroutines of the algorithm.
+>Time complexity is currently semilinear because I'm struggling with the last of the subroutines of the algorithm.  
+For more eleborate discussion you may directly follow to [the wiki](https://aacfox.github.io/RMST/).  
+
 ## Introduction 
 For I am Constantine, the 'C' ~~in C++~~ in my nickname! And this is my half-assed but whole-hearted attempt to understand and implement the mentioned algo. I can hardly explain why of all the probable topics I deem this the most exciting, so here we go.  
 In the wild, there exist other deadly cool algos for the same purpose (which is finding MSTs[^1] of graphs, in case you forgot) but this one just rubs me the right way and was easier to comprehend and finally implement. [Others](./README.md#other-cool-mst-algos) are deterministic with time complexities being great always without degenerating in worst cases.  
-[^1]: [Minimum spanning tree](https://en.wikipedia.org/wiki/Minimum_spanning_tree) (or minimum spanning forest - which is a more general notion).
+[^1]: [Minimum spanning tree](https://en.wikipedia.org/wiki/Minimum_spanning_tree) (or minimum spanning forest - which is a more general notion).  
 
 ## What it does
 Eats graph, poos its MSF[^1] in the same format!  

@@ -1,6 +1,6 @@
 # Tasks
 The subroutines, as the authors divided algorithm into and further divided by me for the sakes of DRY and the code's readability, are as follows:  
-- [x] lambda `boruvka()`, referred in the paper as **Boruvka Step**, which in turn contains:  
+- [x] lambda [`boruvka()`], referred in the paper as **Boruvka Step**, which in turn contains:  
   - [x] `choosing incident edges cycle`
   - [x] `contracting cycle`
   - [x] lambda `trim_selfs_redundants()`
@@ -31,4 +31,7 @@ graph LR
   0-. 1 ..-3
 ```
 Very pretty, isn't it?? SHUTUPITSPRETTY. ~~For a smoker's graph?.. Probably.~~ And it fulfills the task: you can see all edges, nodes, their weights, and distinguish easily edges included and not included into MST by the algo.  
-## 
+
+## Boruvka's subroutine test  
+Since the following graph's MST should be constructed exactly after two Boruvka's steps, the test exercises only them.  
+
