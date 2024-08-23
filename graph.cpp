@@ -110,9 +110,9 @@ public:
 		///trim one of the subroutines of boruvka()
 		/** should be used once on the original graph,
 		incase it already contains self loops or redundant edges
-		\snippet ./graph_8cpp_source.html XXX
+		\snippet graph_8cpp_source.html XXX
 		*/
-		/// [XXX]
+		// [XXX]
 		auto trim_selfs_redundants = [&](edge_multimap& some_edges) {
 			for (unordered_map<Supernode, decltype(iter)> connections;
 				  cauto & supernode : supernodes
@@ -133,9 +133,9 @@ public:
 				connections.clear();
 			}
 		};
-		/// [XXX]
+		// [XXX]
 		trim_selfs_redundants(edges);
-		auto rmst = [&](this auto self, edge_multimap& input) { /// \sa [definition](graph_8cpp_source.html#l( \lineinfo ))
+		auto rmst = [&](this auto self, edge_multimap& input) { /// \sa [definition](graph_8cpp_source.html#l138)
 			edge_set boruvkas{};
 			auto boruvka = [&]() {
 				edge_set buffer{};
