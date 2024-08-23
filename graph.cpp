@@ -13,29 +13,30 @@ public:
 		bool operator==(const Edge&) const = default; /**< I.e. if it comes to comparisons,
 		only full match by all three fields are considered equal*/
 		auto operator<=>(const Edge& other) const { return weight <=> other.weight; }/**<
-		but for an eaisier implementation of other algos comparisons are made only by weight*/
+		For an eaisier implementation of other algos comparisons are made only by weight*/
 	};
 private:
 	size_t _fresh_id{ max_v<size_t> };
 	vector<Edge> _edge_list;
+	/// Set of type ignoring direction of edges
 	using edge_set = unordered_set < Edge, decltype([](cauto& edge) noexcept {
 		return hash<size_t>{}(edge.origin) ^ hash<size_t>{}(edge.exit); }),
 		decltype([](cauto& x, cauto& y) {
 		if (x.weight == y.weight and ((x.origin ^ y.origin) == (x.exit ^ y.exit)))
-			return true; else return false; }) > ; ///< Set of type ignoring direction of edges
+			return true; else return false; }) > ;
 public:
 	Graph() = default;
 	Graph(auto&& edges): _edge_list{ forward_like<decltype(_edge_list)>(edges) } {
 		_fresh_id = ranges::max(_edge_list, {}, [](cauto& x) {return max(x.origin, x.exit); });
 	}
+	///Named ctor
+	/** \param pred — checks if the given pair of adjecent vertices should be connected
+	\throws Exceptions associated with std::allocator */
 	template<ranges::random_access_range Grid, class Pred = ranges::equal_to>
 		requires requires (Grid grid, Pred pred) {
 			{ ranges::begin(grid[0]) }->random_access_iterator;
 			{ pred(grid[0][0], grid[0][0]) } -> convertible_to<bool>;
 	}
-	///Named ctor
-	/** \param pred — checks if the given pair of adjecent vertices should be connected
-	\throws Exceptions associated with std::allocator */
 	static Graph from_grid(Grid&& grid, Pred pred = {}) {
 		Graph graph;
 		size_t max_id{};
@@ -63,7 +64,7 @@ public:
 		return graph;
 	}
 	///Named ctor
-	/** \throws Exceptions associated with std::stream and std::allocator */
+	/** \throws only associated with std::stream and std::allocator */
 	template<class T> requires derived_from<remove_cvref_t<T>, istream>
 	static Graph from_csv(T&& input) {
 		Graph graph;
@@ -204,6 +205,8 @@ public:
 		return mst;
 	}
 	template<class T> requires derived_from<remove_cvref_t<T>, ostream>
+	///Mermaid code generator
+	/** \throws Onlyt associated with std::ostream */
 	void mermaid(T&& output) const {
 		edge_set all_edges(cbegin(), cend());
 		edge_set msf{ from_range, mst() };
