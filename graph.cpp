@@ -98,7 +98,7 @@ public:
 		edge_multimap edges{}; ///< bitset-based hash map for easier node combining
 		vector<Supernode> supernodes(fresh_id()); ///< vector for tracking remaining supernodes
 		///disjoint set of original nodes
-		vector nodes(fresh_id(), supernodes.end()); /**< the latter two can be interpreted as nonoptimized-memory-wise hash_maps
+		vector nodes(fresh_id(), supernodes.end()); /**< the latter two can be interpreted as nonoptimized-memory-wise hash maps:
 		vertice_ID -> respective_type
 		*/
 		for (auto i{ this->cbegin() }; i != this->cend(); ++i) {
@@ -133,7 +133,7 @@ public:
 			}
 		};
 		trim_selfs_redundants(edges);
-		auto rmst = [&](this auto self, edge_multimap& input) { /// \sa [definition](./graph_8cpp.html#l136)
+		auto rmst = [&](this auto self, edge_multimap& input) { /// \sa [definition](graph_8cpp_source.html#l\lineinfo)
 			edge_set boruvkas{};
 			auto boruvka = [&]() {
 				edge_set buffer{};
