@@ -1,6 +1,0 @@
-<map id="Graph::mst" name="Graph::mst">
-<area shape="rect" id="Node000001" title="The actual RMST." alt="" coords="166,29,250,55"/>
-<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="232,16,224,10,208,8,193,10,185,14,183,20,187,28,183,30,178,21,181,11,191,5,208,3,226,5,235,12"/>
-<area shape="rect" id="Node000002" href="$classGraph.html#a13c4fe6e7b3153ee2fa2a6d79838edfa" title="Mermaid code generator." alt="" coords="5,29,118,55"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,45,118,45,118,40,150,40"/>
-</map>
