@@ -110,7 +110,7 @@ public:
 		///trim one of the subroutines of boruvka()
 		/** should be used once on the original graph,
 		incase it already contains self loops or redundant edges
-		\snippet graph_8cpp_source.html XXX
+		\snippet{doc} graph_8cpp_source.html XXX
 		*/
 		// [XXX]
 		auto trim_selfs_redundants = [&](edge_multimap& some_edges) {
