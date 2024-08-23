@@ -1,6 +1,6 @@
 # RMST
 C++ Implementation of [a randomized expected linear time MST algorithm by D. Karger et al(1995)](./README.md#randomized-om-mst-algo).  
->[!CAUTION]
+>[!CAUTION]  
 >Time complexity is currently semilinear because I'm struggling with the last of the subroutines of the algorithm.  
 
 

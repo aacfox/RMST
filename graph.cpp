@@ -95,7 +95,7 @@ public:
 		using edge_multimap = unordered_multimap<Supernode, Edge>;
 		if (vertices_upper_bound < fresh_id()) throw Exception{
 			"Default template argument for number of vertices (which is 1024) proved insufficient." };
-		edge_multimap edges{}; ///< bitset-based hash map for easier node combining \anchor anch1
+		edge_multimap edges{}; ///< bitset-based hash map for easier node combining
 		vector<Supernode> supernodes(fresh_id()); ///< vector for tracking remaining supernodes
 		///disjoint set of original nodes \lineinfo
 		vector nodes(fresh_id(), supernodes.end()); /**< the latter two can be interpreted as nonoptimized-memory-wise hash_maps
@@ -109,8 +109,9 @@ public:
 		auto iter{ edges.cend() }, sentinel{ iter };
 		///one of the subroutines of boruvka() \lineinfo
 		/**
+		\anchor anch
 		should be used once on the original graph,
-		incase it already contains self loops or redundant edges \ref anch1
+		incase it already contains self loops or redundant edges
 		\throws Exception which excepts
 		*/
 		auto trim_selfs_redundants = [&](edge_multimap& some_edges) {
@@ -176,7 +177,7 @@ public:
 			/**
 			perform some magic modificated linear time mst verification algo
 			for deleting F_heavy edges from contracted graph,
-			given the forest of its subgraph
+			given the forest of its subgraph \ref anch anchor
 			*/
 			auto erase_f_heavies = [&](const edge_set& forest) {
 			};
