@@ -111,9 +111,8 @@ public:
 		should be used once on the original graph,
 		incase it already contains self loops or redundant edges
 		\throws Exception which excepts
-		\sa [trim_selfs_redundants]
 		*/
-		auto trim_selfs_redundants = [&](edge_multimap& some_edges) { ///[trim_selfs_redundants]: ./graph.cpp#l116 "definition"
+		auto trim_selfs_redundants = [&](edge_multimap& some_edges) { /// \sa [definition](./graph.cpp#l\lineinfo)
 			for (unordered_map<Supernode, decltype(iter)> connections;
 				  cauto & supernode : supernodes
 				  | views::filter([](cauto& x) { return x.any(); }))
@@ -172,8 +171,7 @@ public:
 				boruvkas.merge(buffer);
 				trim_selfs_redundants(input);
 			};
-			///probable signature
-			/**
+			/** \property Graph::mst::lambda erase_f_heavies
 			perform some magic modificated linear time mst verification algo
 			for deleting F_heavy edges from contracted graph,
 			given the forest of its subgraph
