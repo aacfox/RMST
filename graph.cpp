@@ -30,7 +30,7 @@ public:
 		_fresh_id = ranges::max(_edge_list, {}, [](cauto& x) {return max(x.origin, x.exit); });
 	}
 	///Named ctor
-	/** \param pred — checks if the given pair of adjecent vertices should be connected
+	/** Checks every vertically and horizpntally adjacent vertices with and connects them corresponding to `pred`
 	\throws Exceptions associated with std::allocator */
 	template<ranges::random_access_range Grid, class Pred = ranges::equal_to>
 		requires requires (Grid grid, Pred pred) {
@@ -134,9 +134,6 @@ public:
 			}
 		};
 		trim_selfs_redundants(edges);
-		/** \property The actual Randomized Expected Linear - time MST algorithm
-		* \throws Atleast tries to throw
-		* */
 		auto rmst = [&](this auto self, edge_multimap& input) {
 			edge_set boruvkas{};
 			auto boruvka = [&]() {
@@ -206,7 +203,7 @@ public:
 	}
 	template<class T> requires derived_from<remove_cvref_t<T>, ostream>
 	///Mermaid code generator
-	/** \throws Onlyt associated with std::ostream */
+	/** \throws Only associated with std::ostream */
 	void mermaid(T&& output) const {
 		edge_set all_edges(cbegin(), cend());
 		edge_set msf{ from_range, mst() };
