@@ -113,7 +113,7 @@ public:
 		\throws Exception which excepts
 		\sa [trim_selfs_redundants]
 		*/
-		auto trim_selfs_redundants = [&](edge_multimap& some_edges) { ///[trim_selfs_redundants]: ./graph_8cpp_source.html#L\lineinfo "definition"
+		auto trim_selfs_redundants = [&](edge_multimap& some_edges) { ///[trim_selfs_redundants]: ./graph_8cpp_source.html#l\lineinfo "definition"
 			for (unordered_map<Supernode, decltype(iter)> connections;
 				  cauto & supernode : supernodes
 				  | views::filter([](cauto& x) { return x.any(); }))
