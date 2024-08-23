@@ -107,11 +107,13 @@ public:
 			edges.emplace(supernodes[i->origin], *i);
 		}
 		auto iter{ edges.cend() }, sentinel{ iter };
-		/** \test trim one of the subroutines of boruvka()
-		should be used once on the original graph,
+		///trim one of the subroutines of boruvka()
+		/** should be used once on the original graph,
 		incase it already contains self loops or redundant edges
 		\throws Exception which excepts
+		\snippet{lineno, trimleft} graph.cpp XXX
 		*/
+		/// [XXX]
 		auto trim_selfs_redundants = [&](edge_multimap& some_edges) {
 			for (unordered_map<Supernode, decltype(iter)> connections;
 				  cauto & supernode : supernodes
@@ -132,8 +134,9 @@ public:
 				connections.clear();
 			}
 		};
+		/// [XXX]
 		trim_selfs_redundants(edges);
-		auto rmst = [&](this auto self, edge_multimap& input) { /// \sa [definition](graph_8cpp_source.html#l\lineinfo)
+		auto rmst = [&](this auto self, edge_multimap& input) { /// \sa [definition](graph_8cpp_source.html#l@lineinfo)
 			edge_set boruvkas{};
 			auto boruvka = [&]() {
 				edge_set buffer{};
