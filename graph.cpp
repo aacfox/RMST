@@ -29,8 +29,8 @@ public:
 	Graph(auto&& edges): _edge_list{ forward_like<decltype(_edge_list)>(edges) } {
 		_fresh_id = ranges::max(_edge_list, {}, [](cauto& x) {return max(x.origin, x.exit); });
 	}
-	///Named ctor
-	/** Checks every vertically and horizpntally adjacent vertices with and connects them corresponding to `pred`
+	///Named `ctor`
+	/** Checks every vertically and horizpntally adjacent vertices and connects them corresponding to `pred`
 	\throws Exceptions associated with std::allocator */
 	template<ranges::random_access_range Grid, class Pred = ranges::equal_to>
 		requires requires (Grid grid, Pred pred) {
@@ -63,7 +63,7 @@ public:
 		graph._fresh_id = move(max_id);
 		return graph;
 	}
-	///Named ctor
+	///Named `ctor`
 	/** \throws only associated with std::stream and std::allocator */
 	template<class T> requires derived_from<remove_cvref_t<T>, istream>
 	static Graph from_csv(T&& input) {
@@ -95,9 +95,9 @@ public:
 		using edge_multimap = unordered_multimap<Supernode, Edge>;
 		if (vertices_upper_bound < fresh_id()) throw Exception{
 			"Default template argument for number of vertices (which is 1024) proved insufficient." };
-		edge_multimap edges{}; ///< bitset-based hash map for easier node combining
+		edge_multimap edges{}; ///< bitset-based hash map for easier node combining \anchor anch1
 		vector<Supernode> supernodes(fresh_id()); ///< vector for tracking remaining supernodes
-		///disjoint set of original nodes
+		///disjoint set of original nodes \lineinfo
 		vector nodes(fresh_id(), supernodes.end()); /**< the latter two can be interpreted as nonoptimized-memory-wise hash_maps
 		vertice_ID -> respective_type
 		*/
@@ -107,10 +107,10 @@ public:
 			edges.emplace(supernodes[i->origin], *i);
 		}
 		auto iter{ edges.cend() }, sentinel{ iter };
-		///one of the subroutines of boruvka()
+		///one of the subroutines of boruvka() \lineinfo
 		/**
 		should be used once on the original graph,
-		incase it already contains self loops or redundant edges
+		incase it already contains self loops or redundant edges \ref anch1
 		\throws Exception which excepts
 		*/
 		auto trim_selfs_redundants = [&](edge_multimap& some_edges) {
@@ -201,9 +201,9 @@ public:
 		}
 		return mst;
 	}
-	template<class T> requires derived_from<remove_cvref_t<T>, ostream>
 	///Mermaid code generator
 	/** \throws Only associated with std::ostream */
+	template<class T> requires derived_from<remove_cvref_t<T>, ostream>
 	void mermaid(T&& output) const {
 		edge_set all_edges(cbegin(), cend());
 		edge_set msf{ from_range, mst() };
