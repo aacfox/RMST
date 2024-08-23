@@ -171,8 +171,7 @@ public:
 				boruvkas.merge(buffer);
 				trim_selfs_redundants(input);
 			};
-			/** \property Graph::mst::lambda erase_f_heavies
-			perform some magic modificated linear time mst verification algo
+			/** perform some magic modificated linear time mst verification algo
 			for deleting F_heavy edges from contracted graph,
 			given the forest of its subgraph
 			*/
