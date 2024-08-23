@@ -107,26 +107,25 @@ public:
 			edges.emplace(supernodes[i->origin], *i);
 		}
 		auto iter{ edges.cend() }, sentinel{ iter };
-		///one of the subroutines of boruvka() \lineinfo
-		/**
-		\anchor anch
+		/** \section trim one of the subroutines of boruvka()
 		should be used once on the original graph,
 		incase it already contains self loops or redundant edges
 		\throws Exception which excepts
+		\sa [trim_selfs_redundants]
 		*/
-		auto trim_selfs_redundants = [&](edge_multimap& some_edges) {
+		auto trim_selfs_redundants = [&](edge_multimap& some_edges) { ///[trim_selfs_redundants]: ./graph_8cpp_source.html#L\lineinfo "definition"
 			for (unordered_map<Supernode, decltype(iter)> connections;
 				  cauto & supernode : supernodes
 				  | views::filter([](cauto& x) { return x.any(); }))
 				for (tie(iter, sentinel) = some_edges.equal_range(supernode);
 					  iter != sentinel;) {
-				if (supernode[iter->second.exit]) { ///i.e. a self-loop
+				if (supernode[iter->second.exit]) { //i.e. a self-loop
 					some_edges.erase(iter++);
 					continue;
-				} ///else check if the edge's redundant. For that,
-				  /// firstly, check if the connection wasn't considered before yet or was already.
+				} //else check if the edge's redundant. For that,
+				  //firstly, check if the connection wasn't yet considered before or was already.
 				if (auto connected{ connections.find(*nodes[iter->second.exit]) };
-					 connected == connections.cend())///first case
+					 connected == connections.cend())//first case
 					connections[supernode] = iter++;
 				else if (iter->second.weight < connected->second->second.weight)
 					some_edges.erase(exchange(connected->second, iter++));
@@ -177,7 +176,7 @@ public:
 			/**
 			perform some magic modificated linear time mst verification algo
 			for deleting F_heavy edges from contracted graph,
-			given the forest of its subgraph \ref anch anchor
+			given the forest of its subgraph
 			*/
 			auto erase_f_heavies = [&](const edge_set& forest) {
 			};
