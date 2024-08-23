@@ -131,6 +131,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a13c4fe6e7b3153ee2fa2a6d79838edfa" id="r_a13c4fe6e7b3153ee2fa2a6d79838edfa"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">class</a> <a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">T</a> &gt; <br />
 requires <a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">derived_from</a>&lt;<a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">remove_cvref_t</a>&lt;<a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">T</a>&gt;, <a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">ostream</a>&gt;</td></tr>
 <tr class="memitem:a13c4fe6e7b3153ee2fa2a6d79838edfa"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classGraph.html#a13c4fe6e7b3153ee2fa2a6d79838edfa">mermaid</a> (<a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">T</a> &amp;&amp;<a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">output</a>) <a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">const</a></td></tr>
+<tr class="memdesc:a13c4fe6e7b3153ee2fa2a6d79838edfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mermaid code generator.  <br /></td></tr>
 <tr class="separator:a13c4fe6e7b3153ee2fa2a6d79838edfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
@@ -138,12 +139,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ab7ca595c41bf323d1a71b705f82442c7" id="r_ab7ca595c41bf323d1a71b705f82442c7"><td class="memTemplParams" colspan="2">template&lt;ranges::random_access_range Grid, <a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">class</a> <a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">Pred</a>  = ranges::equal_to&gt; <br />
 requires <a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">requires</a> (<a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">Grid</a> <a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">grid</a>, <a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">Pred</a> <a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">pred</a>) { { ranges::begin(<a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">grid</a>[0]) }-&gt;<a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">random_access_iterator</a>; { <a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">pred</a>(<a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">grid</a>[0][0], <a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">grid</a>[0][0]) } -&gt; <a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">convertible_to</a>&lt;<a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">bool</a>&gt;; }</td></tr>
 <tr class="memitem:ab7ca595c41bf323d1a71b705f82442c7"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">static</a> <a class="el" href="classGraph.html">Graph</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classGraph.html#ab7ca595c41bf323d1a71b705f82442c7">from_grid</a> (<a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">Grid</a> &amp;&amp;<a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">grid</a>, <a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">Pred</a> <a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">pred</a>={})</td></tr>
-<tr class="memdesc:ab7ca595c41bf323d1a71b705f82442c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Named ctor.  <br /></td></tr>
+<tr class="memdesc:ab7ca595c41bf323d1a71b705f82442c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Named <code>ctor</code>  <br /></td></tr>
 <tr class="separator:ab7ca595c41bf323d1a71b705f82442c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79f5662987d8c62edd32365406bffcaa" id="r_a79f5662987d8c62edd32365406bffcaa"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">class</a> <a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">T</a> &gt; <br />
 requires <a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">derived_from</a>&lt;<a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">remove_cvref_t</a>&lt;<a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">T</a>&gt;, <a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">istream</a>&gt;</td></tr>
 <tr class="memitem:a79f5662987d8c62edd32365406bffcaa"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">static</a> <a class="el" href="classGraph.html">Graph</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classGraph.html#a79f5662987d8c62edd32365406bffcaa">from_csv</a> (<a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">T</a> &amp;&amp;<a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">input</a>)</td></tr>
-<tr class="memdesc:a79f5662987d8c62edd32365406bffcaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Named ctor.  <br /></td></tr>
+<tr class="memdesc:a79f5662987d8c62edd32365406bffcaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Named <code>ctor</code>  <br /></td></tr>
 <tr class="separator:a79f5662987d8c62edd32365406bffcaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-types" name="pri-types"></a>
@@ -312,7 +313,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="classGraph_a357809e14f80ad72bd3d007b37d77e05_icgraph.png" border="0" usemap="#aclassGraph_a357809e14f80ad72bd3d007b37d77e05_icgraph" alt=""/></div>
 <map name="aclassGraph_a357809e14f80ad72bd3d007b37d77e05_icgraph" id="aclassGraph_a357809e14f80ad72bd3d007b37d77e05_icgraph">
 <area shape="rect" title=" " alt="" coords="298,7,398,32"/>
-<area shape="rect" href="classGraph.html#a13c4fe6e7b3153ee2fa2a6d79838edfa" title=" " alt="" coords="5,7,118,32"/>
+<area shape="rect" href="classGraph.html#a13c4fe6e7b3153ee2fa2a6d79838edfa" title="Mermaid code generator." alt="" coords="5,7,118,32"/>
 <area shape="poly" title=" " alt="" coords="282,13,250,10,166,10,118,15,118,9,166,5,250,5,283,8"/>
 <area shape="rect" href="classGraph.html#a3601c6a236196c427f9fc475eacf57bb" title="The actual RMST." alt="" coords="166,44,250,70"/>
 <area shape="poly" title=" " alt="" coords="283,40,251,48,250,43,282,34"/>
@@ -355,7 +356,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="classGraph_add1a0288b625e7faef730b21dc50a1f8_icgraph.png" border="0" usemap="#aclassGraph_add1a0288b625e7faef730b21dc50a1f8_icgraph" alt=""/></div>
 <map name="aclassGraph_add1a0288b625e7faef730b21dc50a1f8_icgraph" id="aclassGraph_add1a0288b625e7faef730b21dc50a1f8_icgraph">
 <area shape="rect" title=" " alt="" coords="298,7,388,33"/>
-<area shape="rect" href="classGraph.html#a13c4fe6e7b3153ee2fa2a6d79838edfa" title=" " alt="" coords="5,7,118,33"/>
+<area shape="rect" href="classGraph.html#a13c4fe6e7b3153ee2fa2a6d79838edfa" title="Mermaid code generator." alt="" coords="5,7,118,33"/>
 <area shape="poly" title=" " alt="" coords="282,14,250,10,166,10,118,15,118,9,166,5,250,5,283,8"/>
 <area shape="rect" href="classGraph.html#a3601c6a236196c427f9fc475eacf57bb" title="The actual RMST." alt="" coords="166,44,250,70"/>
 <area shape="poly" title=" " alt="" coords="284,39,251,48,250,43,282,34"/>
@@ -427,7 +428,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="classGraph_ad36737ebb96cfacbffe6204ad5f2d7b1_icgraph.png" border="0" usemap="#aclassGraph_ad36737ebb96cfacbffe6204ad5f2d7b1_icgraph" alt=""/></div>
 <map name="aclassGraph_ad36737ebb96cfacbffe6204ad5f2d7b1_icgraph" id="aclassGraph_ad36737ebb96cfacbffe6204ad5f2d7b1_icgraph">
 <area shape="rect" title=" " alt="" coords="298,7,406,32"/>
-<area shape="rect" href="classGraph.html#a13c4fe6e7b3153ee2fa2a6d79838edfa" title=" " alt="" coords="5,7,118,32"/>
+<area shape="rect" href="classGraph.html#a13c4fe6e7b3153ee2fa2a6d79838edfa" title="Mermaid code generator." alt="" coords="5,7,118,32"/>
 <area shape="poly" title=" " alt="" coords="282,13,250,10,166,10,118,15,118,9,166,5,250,5,283,8"/>
 <area shape="rect" href="classGraph.html#a3601c6a236196c427f9fc475eacf57bb" title="The actual RMST." alt="" coords="166,44,250,70"/>
 <area shape="poly" title=" " alt="" coords="286,39,251,49,250,43,284,34"/>
@@ -467,7 +468,7 @@ requires <a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf
 </table>
 </div><div class="memdoc">
 
-<p>Named ctor. </p>
+<p>Named <code>ctor</code> </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">only</td><td>associated with std::stream and std::allocator </td></tr>
@@ -518,8 +519,8 @@ requires <a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf
 </table>
 </div><div class="memdoc">
 
-<p>Named ctor. </p>
-<p>Checks every vertically and horizpntally adjacent vertices with and connects them corresponding to <code>pred</code> </p><dl class="exception"><dt>Exceptions</dt><dd>
+<p>Named <code>ctor</code> </p>
+<p>Checks every vertically and horizpntally adjacent vertices and connects them corresponding to <code>pred</code> </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">Exceptions</td><td>associated with std::allocator </td></tr>
   </table>
@@ -559,13 +560,21 @@ requires <a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf
 </table>
 </div><div class="memdoc">
 
+<p>Mermaid code generator. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Only</td><td>associated with std::ostream </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="graph_8cpp_source.html#l00207">207</a> of file <a class="el" href="graph_8cpp_source.html">graph.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGraph_a13c4fe6e7b3153ee2fa2a6d79838edfa_cgraph.png" border="0" usemap="#aclassGraph_a13c4fe6e7b3153ee2fa2a6d79838edfa_cgraph" alt=""/></div>
 <map name="aclassGraph_a13c4fe6e7b3153ee2fa2a6d79838edfa_cgraph" id="aclassGraph_a13c4fe6e7b3153ee2fa2a6d79838edfa_cgraph">
-<area shape="rect" title=" " alt="" coords="5,76,118,102"/>
+<area shape="rect" title="Mermaid code generator." alt="" coords="5,76,118,102"/>
 <area shape="rect" href="classGraph.html#a357809e14f80ad72bd3d007b37d77e05" title=" " alt="" coords="302,13,402,39"/>
 <area shape="poly" title=" " alt="" coords="74,74,112,41,137,24,165,12,195,5,227,3,287,8,286,13,227,8,196,10,167,17,140,29,115,45,77,78"/>
 <area shape="rect" href="classGraph.html#add1a0288b625e7faef730b21dc50a1f8" title=" " alt="" coords="307,83,397,108"/>
@@ -617,12 +626,12 @@ template&lt;<a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7e
   </table>
   </dd>
 </dl>
-<p>&lt; bitset-based hash map for easier node combining</p>
+<p>&lt; bitset-based hash map for easier node combining<a class="anchor" id="anch1"></a></p>
 <p>&lt; vector for tracking remaining supernodes</p>
-<p>disjoint set of original nodes</p>
+<p>disjoint set of original nodes 100</p>
 <p>&lt; the latter two can be interpreted as nonoptimized-memory-wise hash_maps vertice_ID -&gt; respective_type</p>
-<p>one of the subroutines of <a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">boruvka()</a></p>
-<p>should be used once on the original graph, incase it already contains self loops or redundant edges </p><dl class="exception"><dt>Exceptions</dt><dd>
+<p>one of the subroutines of <a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">boruvka()</a> 110</p>
+<p>should be used once on the original graph, incase it already contains self loops or redundant edges <a class="el" href="/github/workspace/graph.cpp#anch1">anch1</a> </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">Exception</td><td>which excepts</td></tr>
   </table>
@@ -661,7 +670,7 @@ Here is the caller graph for this function:</div>
 <map name="aclassGraph_a3601c6a236196c427f9fc475eacf57bb_icgraph" id="aclassGraph_a3601c6a236196c427f9fc475eacf57bb_icgraph">
 <area shape="rect" title="The actual RMST." alt="" coords="166,29,250,55"/>
 <area shape="poly" title=" " alt="" coords="232,16,224,10,208,8,193,10,185,14,183,20,187,28,183,30,178,21,181,11,191,5,208,3,226,5,235,12"/>
-<area shape="rect" href="classGraph.html#a13c4fe6e7b3153ee2fa2a6d79838edfa" title=" " alt="" coords="5,29,118,55"/>
+<area shape="rect" href="classGraph.html#a13c4fe6e7b3153ee2fa2a6d79838edfa" title="Mermaid code generator." alt="" coords="5,29,118,55"/>
 <area shape="poly" title=" " alt="" coords="150,45,118,45,118,40,150,40"/>
 </map>
 </div>
