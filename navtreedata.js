@@ -40,7 +40,7 @@ var NAVTREE =
     [ "Tasks", "md_docs_2CONTRIBUTING.html", [
       [ "Test cases", "md_docs_2CONTRIBUTING.html#autotoc_md1", [
         [ "Example", "md_docs_2CONTRIBUTING.html#autotoc_md2", null ],
-        [ "autotoc_md3", "md_docs_2CONTRIBUTING.html#autotoc_md3", null ]
+        [ "Boruvka's subroutine test", "md_docs_2CONTRIBUTING.html#autotoc_md3", null ]
       ] ]
     ] ],
     [ "Modules", "modules.html", [
@@ -88,7 +88,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"namespaceboil_1_1utilities.html#a4602626943325a0ca078e5a113c06d51"
+"namespaceboil_1_1utilities.html#a65c959a85f6327c153814441e08c2756"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

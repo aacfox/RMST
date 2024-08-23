@@ -95,12 +95,16 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
   <div class="headertitle"><div class="title">RMST </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_README"></a>C++ Implementation of <a href="./README.md#randomized-om-mst-algo">a randomized expected linear time MST algorithm by D. Karger et al(1995)</a>. &gt;[!CAUTION] &gt;Time complexity is currently semilinear because I'm struggling with the last of the subroutines of the algorithm. </p>
+<div class="textblock"><p><a class="anchor" id="md_README"></a>C++ Implementation of <a href="./README.md#randomized-om-mst-algo">a randomized expected linear time MST algorithm by D. Karger et al(1995)</a>. <br  />
+ &gt;[!CAUTION] &gt;Time complexity is currently semilinear because I'm struggling with the last of the subroutines of the algorithm. <br  />
+ For more eleborate discussion you may directly follow to <a href="https://aacfox.github.io/RMST/">the wiki</a>. <br  />
+</p>
 <h1><a class="anchor" id="autotoc_md5"></a>
 Introduction</h1>
 <p>For I am Constantine, the 'C' <strike>in C++</strike> in my nickname! And this is my half-assed but whole-hearted attempt to understand and implement the mentioned algo. I can hardly explain why of all the probable topics I deem this the most exciting, so here we go. <br  />
  In the wild, there exist other deadly cool algos for the same purpose (which is finding MSTs[^1] of graphs, in case you forgot) but this one just rubs me the right way and was easier to comprehend and finally implement. <a href="./README.md#other-cool-mst-algos">Others</a> are deterministic with time complexities being great always without degenerating in worst cases. <br  />
- [^1]: <a href="https://en.wikipedia.org/wiki/Minimum_spanning_tree">Minimum spanning tree</a> (or minimum spanning forest - which is a more general notion).</p>
+ [^1]: <a href="https://en.wikipedia.org/wiki/Minimum_spanning_tree">Minimum spanning tree</a> (or minimum spanning forest - which is a more general notion). <br  />
+</p>
 <h1><a class="anchor" id="autotoc_md6"></a>
 What it does</h1>
 <p>Eats graph, poos its MSF[^1] in the same format! <br  />
@@ -143,7 +147,7 @@ The algorithm's source code</h2>
 </p>
 <p><code><a class="el" href="classGraph.html">Graph</a></code> also has several <code>named constructors</code>. Specifically:</p><ul>
 <li><code><a class="el" href="classGraph.html#ab7ca595c41bf323d1a71b705f82442c7">Graph::from_grid</a></code> — creates a graph from any 2D-range (i.e. supporting two consecutive subscript <code>operator[]</code>)</li>
-<li><code><a class="el" href="classGraph.html#a79f5662987d8c62edd32365406bffcaa">Graph::from_csv</a></code> — creates a graph from any <code>std::istream</code> formatted as explained above</li>
+<li><code><a class="el" href="classGraph.html#a79f5662987d8c62edd32365406bffcaa" title="Named ctor.">Graph::from_csv</a></code> — creates a graph from any <code>std::istream</code> formatted as explained above</li>
 </ul>
 <p>Check <a href="./graph.cpp">source code</a> for the full signature and documentation. <br  />
 </p>
