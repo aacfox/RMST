@@ -97,7 +97,7 @@ public:
 			"Default template argument for number of vertices (which is 1024) proved insufficient." };
 		edge_multimap edges{}; ///< bitset-based hash map for easier node combining
 		vector<Supernode> supernodes(fresh_id()); ///< vector for tracking remaining supernodes
-		///disjoint set of original nodes \lineinfo
+		///disjoint set of original nodes
 		vector nodes(fresh_id(), supernodes.end()); /**< the latter two can be interpreted as nonoptimized-memory-wise hash_maps
 		vertice_ID -> respective_type
 		*/
@@ -107,12 +107,12 @@ public:
 			edges.emplace(supernodes[i->origin], *i);
 		}
 		auto iter{ edges.cend() }, sentinel{ iter };
-		/** \section trim one of the subroutines of boruvka()
+		/** \test trim one of the subroutines of boruvka()
 		should be used once on the original graph,
 		incase it already contains self loops or redundant edges
 		\throws Exception which excepts
 		*/
-		auto trim_selfs_redundants = [&](edge_multimap& some_edges) { /// \sa [definition](./graph.cpp#l115)
+		auto trim_selfs_redundants = [&](edge_multimap& some_edges) {
 			for (unordered_map<Supernode, decltype(iter)> connections;
 				  cauto & supernode : supernodes
 				  | views::filter([](cauto& x) { return x.any(); }))
@@ -133,7 +133,7 @@ public:
 			}
 		};
 		trim_selfs_redundants(edges);
-		auto rmst = [&](this auto self, edge_multimap& input) {
+		auto rmst = [&](this auto self, edge_multimap& input) { /// \sa [definition](./graph_8cpp.html#l136)
 			edge_set boruvkas{};
 			auto boruvka = [&]() {
 				edge_set buffer{};
