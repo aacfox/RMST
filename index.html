@@ -146,7 +146,7 @@ The algorithm's source code</h2>
 <p>Any given graph is stored in a data member as a plain <code>vector&lt;<a class="el" href="structGraph_1_1Edge.html">Graph::Edge</a>&gt;</code> representing an edge list. But <code>mst()</code> is oblivious of this fact, so feel free to change the storage until a type-complete instance of <code><a class="el" href="classGraph.html">Graph</a></code> constitutes the <code>std::ranges::range</code> concept, and the derefencing of iterators returns <code><a class="el" href="structGraph_1_1Edge.html">Graph::Edge</a></code>. <br  />
 </p>
 <p><code><a class="el" href="classGraph.html">Graph</a></code> also has several <code>named constructors</code>. Specifically:</p><ul>
-<li><code><a class="el" href="classGraph.html#ab7ca595c41bf323d1a71b705f82442c7">Graph::from_grid</a></code> — creates a graph from any 2D-range (i.e. supporting two consecutive subscript <code>operator[]</code>)</li>
+<li><code><a class="el" href="classGraph.html#ab7ca595c41bf323d1a71b705f82442c7" title="Named ctor.">Graph::from_grid</a></code> — creates a graph from any 2D-range (i.e. supporting two consecutive subscript <code>operator[]</code>)</li>
 <li><code><a class="el" href="classGraph.html#a79f5662987d8c62edd32365406bffcaa" title="Named ctor.">Graph::from_csv</a></code> — creates a graph from any <code>std::istream</code> formatted as explained above</li>
 </ul>
 <p>Check <a href="./graph.cpp">source code</a> for the full signature and documentation. <br  />
