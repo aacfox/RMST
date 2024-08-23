@@ -112,7 +112,7 @@ public:
 		incase it already contains self loops or redundant edges
 		\throws Exception which excepts
 		*/
-		auto trim_selfs_redundants = [&](edge_multimap& some_edges) { /// \sa [definition](./graph.cpp#l\lineinfo)
+		auto trim_selfs_redundants = [&](edge_multimap& some_edges) { /// \sa [definition](./graph.cpp#l115)
 			for (unordered_map<Supernode, decltype(iter)> connections;
 				  cauto & supernode : supernodes
 				  | views::filter([](cauto& x) { return x.any(); }))
