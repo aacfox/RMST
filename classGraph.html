@@ -568,7 +568,7 @@ requires <a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="graph_8cpp_source.html#l00208">208</a> of file <a class="el" href="graph_8cpp_source.html">graph.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph_8cpp_source.html#l00207">207</a> of file <a class="el" href="graph_8cpp_source.html">graph.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -630,20 +630,19 @@ template&lt;<a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7e
 <p>&lt; vector for tracking remaining supernodes</p>
 <p>disjoint set of original nodes 100</p>
 <p>&lt; the latter two can be interpreted as nonoptimized-memory-wise hash_maps vertice_ID -&gt; respective_type</p>
-<p>one of the subroutines of <a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">boruvka()</a> 110</p>
-<p><a class="anchor" id="anch"></a>should be used once on the original graph, incase it already contains self loops or redundant edges </p><dl class="exception"><dt>Exceptions</dt><dd>
+<h1><a class="anchor" id="trim"></a>
+one of the subroutines of boruvka()</h1>
+<p>should be used once on the original graph, incase it already contains self loops or redundant edges </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">Exception</td><td>which excepts</td></tr>
+    <tr><td class="paramname">Exception</td><td>which excepts </td></tr>
   </table>
   </dd>
 </dl>
-<p>i.e. a self-loop</p>
-<p>else check if the edge's redundant. For that, firstly, check if the connection wasn't considered before yet or was already.</p>
-<p>first case</p>
+<dl class="section see"><dt>See also</dt><dd>[<a class="el" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">trim_selfs_redundants</a>]</dd></dl>
 <p>choosing-incident-edges cycle:</p>
 <p>contracting cycle:</p>
 <p>probable signature</p>
-<p>perform some magic modificated linear time mst verification algo for deleting F_heavy edges from contracted graph, given the forest of its subgraph <a class="el" href="/github/workspace/graph.cpp#anch">anch</a> anchor</p>
+<p>perform some magic modificated linear time mst verification algo for deleting F_heavy edges from contracted graph, given the forest of its subgraph</p>
 <p>to prevent rehashing</p>
 <p>time to restore invariants:</p>
 
