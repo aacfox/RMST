@@ -43,7 +43,6 @@ var NAVTREE =
         [ "Boruvka's subroutine test", "md_docs_2CONTRIBUTING.html#autotoc_md3", null ]
       ] ]
     ] ],
-    [ "Test List", "test.html", null ],
     [ "Modules", "modules.html", [
       [ "Modules List", "modules.html", "modules_dup" ],
       [ "Module Members", "modulemembers.html", [
