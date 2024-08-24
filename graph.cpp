@@ -91,6 +91,8 @@ public:
 	///The actual RMST
 	/** \throws boil::Exception if the last's vertex id is bigger than template parameter */
 	template <size_t vertices_upper_bound = 1024> Graph mst() const {
+		///It's a typedef
+		/** But doxygen doesn't give a shit... */
 		using Supernode = bitset<vertices_upper_bound>;
 		using edge_multimap = unordered_multimap<Supernode, Edge>;
 		if (vertices_upper_bound < fresh_id()) throw Exception{
@@ -101,6 +103,8 @@ public:
 		vector nodes(fresh_id(), supernodes.end()); /**< the latter two can be interpreted as nonoptimized-memory-wise hash maps:
 		vertice_ID -> respective_type
 		*/
+		///Inner_class inner class
+		/** yet again doesn't it give a shit */
 		for (auto i{ this->cbegin() }; i != this->cend(); ++i) {
 			supernodes[i->origin].set(i->origin);
 			nodes[i->origin] = supernodes.begin() + i->origin;
