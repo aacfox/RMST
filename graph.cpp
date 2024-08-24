@@ -111,7 +111,7 @@ public:
 		/ should be used once on the original graph,
 		incase it already contains self loops or redundant edges
 		*/
-		auto trim_selfs_redundants = [&](edge_multimap& some_edges) { // <a name = "tsr_def">definition</a>
+		auto trim_selfs_redundants = [&](edge_multimap& some_edges) { /// <a name = "tsr_def">definition</a>
 			for (unordered_map<Supernode, decltype(iter)> connections;
 				  cauto & supernode : supernodes
 				  | views::filter([](cauto& x) { return x.any(); }))
@@ -134,7 +134,7 @@ public:
 		trim_selfs_redundants(edges);
 		auto rmst = [&](this auto self, edge_multimap& input) {
 			edge_set boruvkas{};
-			auto boruvka = [&]() {
+			auto boruvka = [&]() { /// <a ID = "boruvka_def">definition</a>
 				edge_set buffer{};
 				///choosing-incident-edges cycle:
 				for (auto lightest{ iter }; cauto & node : supernodes
@@ -186,7 +186,7 @@ public:
 			erase_f_heavies(self(subgraph));
 			boruvkas.merge(self(input));
 			return boruvkas;
-		};
+		}; ///\see <a href="graph_8cpp_source.html#boruvka_def">definition</a>
 		edge_set mst_edges{ rmst(edges) };
 		Graph mst; ///time to restore invariants:
 		mst._fresh_id = _fresh_id;
