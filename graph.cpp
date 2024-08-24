@@ -130,7 +130,7 @@ public:
 				else some_edges.erase(iter++);
 				connections.clear();
 			}
-		}; ///<a href="graph_8cpp_source.html#tsr_def"></a>
+		}; ///\see <a href="graph_8cpp_source.html#tsr_def">definition</a>
 		trim_selfs_redundants(edges);
 		auto rmst = [&](this auto self, edge_multimap& input) {
 			edge_set boruvkas{};
