@@ -137,9 +137,9 @@ public:
 			edge_set boruvkas{};
 			/** boruvka() documentation
 				\see <a href="graph_8cpp_source.html#boruvka_def">definition</a>
-				\see <a href="graph_8cpp_source.htmlgraph_cpp.html#cycle">cycle</a>
+				\see <a href="graph_8cpp_source.html#cycle">cycle</a>
 			*/
-			auto boruvka = [&]() { /* <a ID = "boruvka_def">definition</a> */
+			auto boruvka = [&]() { /// <a ID = "boruvka_def">definition</a>
 				edge_set buffer{};
 				///choosing-incident-edges cycle:
 				for (auto lightest{ iter }; cauto & node : supernodes
@@ -150,7 +150,7 @@ public:
 					if (lightest != sentinel) buffer.insert(input.extract(lightest).mapped());
 				}
 				///contracting cycle:
-				for (auto absorbing{ supernodes.end() }, absorbed{ absorbing }; /** <a name = "cycle">prrt</a> */
+				for (auto absorbing{ supernodes.end() }, absorbed{ absorbing }; // <a name = "cycle">prrt</a>
 					  cauto & edge : buffer) {
 					absorbing = nodes[edge.origin];
 					absorbed = nodes[edge.exit];
