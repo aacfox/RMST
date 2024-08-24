@@ -97,7 +97,7 @@ public:
 			"Default template argument for number of vertices (which is 1024) proved insufficient." };
 		edge_multimap edges{}; ///< bitset-based hash map for easier node combining
 		vector<Supernode> supernodes(fresh_id()); ///< vector for tracking remaining supernodes
-		///disjoint set of original nodes
+		///disjoint set of original nodes \anchor anch
 		vector nodes(fresh_id(), supernodes.end()); /**< the latter two can be interpreted as nonoptimized-memory-wise hash maps:
 		vertice_ID -> respective_type
 		*/
@@ -111,6 +111,7 @@ public:
 		/ should be used once on the original graph,
 		incase it already contains self loops or redundant edges
 		\see <a href="graph_8cpp_source.html#tsr_def">definition</a>
+		\see \ref anch some reference
 		*/
 		auto trim_selfs_redundants = [&](edge_multimap& some_edges) { /** <a name = "tsr_def">def</a> */
 			for (unordered_map<Supernode, decltype(iter)> connections;
