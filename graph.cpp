@@ -110,8 +110,9 @@ public:
 		/**trim one of the subroutines of boruvka()
 		/ should be used once on the original graph,
 		incase it already contains self loops or redundant edges
+		\see <a href="graph_8cpp_source.html#tsr_def">definition</a>
 		*/
-		auto trim_selfs_redundants = [&](edge_multimap& some_edges) { /// <a name = "tsr_def">definition</a>
+		auto trim_selfs_redundants = [&](edge_multimap& some_edges) { /// <a name = "tsr_def"> def </a>
 			for (unordered_map<Supernode, decltype(iter)> connections;
 				  cauto & supernode : supernodes
 				  | views::filter([](cauto& x) { return x.any(); }))
@@ -130,11 +131,14 @@ public:
 				else some_edges.erase(iter++);
 				connections.clear();
 			}
-		}; ///\see <a href="graph_8cpp_source.html#tsr_def">definition</a>
+		};
 		trim_selfs_redundants(edges);
 		auto rmst = [&](this auto self, edge_multimap& input) {
 			edge_set boruvkas{};
-			auto boruvka = [&]() { /// <a ID = "boruvka_def">definition</a>
+			/** boruvka() documentation
+				\see <a href="graph_8cpp_source.html#boruvka_def">definition</a>
+			*/
+			auto boruvka = [&]() { // <a ID = "boruvka_def">definition</a>
 				edge_set buffer{};
 				///choosing-incident-edges cycle:
 				for (auto lightest{ iter }; cauto & node : supernodes
@@ -145,7 +149,7 @@ public:
 					if (lightest != sentinel) buffer.insert(input.extract(lightest).mapped());
 				}
 				///contracting cycle:
-				for (auto absorbing{ supernodes.end() }, absorbed{ absorbing };
+				for (auto absorbing{ supernodes.end() }, absorbed{ absorbing }; /** <a name = "cycle">prrt</a> */
 					  cauto & edge : buffer) {
 					absorbing = nodes[edge.origin];
 					absorbed = nodes[edge.exit];
@@ -186,7 +190,7 @@ public:
 			erase_f_heavies(self(subgraph));
 			boruvkas.merge(self(input));
 			return boruvkas;
-		}; ///\see <a href="graph_8cpp_source.html#boruvka_def">definition</a>
+		};
 		edge_set mst_edges{ rmst(edges) };
 		Graph mst; ///time to restore invariants:
 		mst._fresh_id = _fresh_id;
