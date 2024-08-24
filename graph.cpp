@@ -112,7 +112,7 @@ public:
 		incase it already contains self loops or redundant edges
 		\see <a href="graph_8cpp_source.html#tsr_def">definition</a>
 		*/
-		auto trim_selfs_redundants = [&](edge_multimap& some_edges) { /// <a name = "tsr_def"> def </a>
+		auto trim_selfs_redundants = [&](edge_multimap& some_edges) { /** <a name = "tsr_def"> def < / a> */
 			for (unordered_map<Supernode, decltype(iter)> connections;
 				  cauto & supernode : supernodes
 				  | views::filter([](cauto& x) { return x.any(); }))
@@ -137,8 +137,9 @@ public:
 			edge_set boruvkas{};
 			/** boruvka() documentation
 				\see <a href="graph_8cpp_source.html#boruvka_def">definition</a>
+				\see <a href="graph_8cpp_source.html#cycle">cycle</a>
 			*/
-			auto boruvka = [&]() { // <a ID = "boruvka_def">definition</a>
+			auto boruvka = [&]() { /* <a ID = "boruvka_def">definition< / a> */
 				edge_set buffer{};
 				///choosing-incident-edges cycle:
 				for (auto lightest{ iter }; cauto & node : supernodes
