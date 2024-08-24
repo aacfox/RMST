@@ -139,7 +139,7 @@ public:
 				\see <a href="graph_8cpp_source.html#boruvka_def">definition</a>
 				\see <a href="graph_8cpp_source.html#cycle">cycle</a>
 			*/
-			auto boruvka = [&]() { /* <a ID = "boruvka_def">definition< / a> */
+			auto boruvka = [&]() { /* <a ID = "boruvka_def">definition</a> */
 				edge_set buffer{};
 				///choosing-incident-edges cycle:
 				for (auto lightest{ iter }; cauto & node : supernodes
