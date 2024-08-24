@@ -107,11 +107,11 @@ public:
 			edges.emplace(supernodes[i->origin], *i);
 		}
 		auto iter{ edges.cend() }, sentinel{ iter };
-		///trim one of the subroutines of boruvka()
-		/** should be used once on the original graph,
+		/**trim one of the subroutines of boruvka()
+		/ should be used once on the original graph,
 		incase it already contains self loops or redundant edges
 		*/
-		auto trim_selfs_redundants = [&](edge_multimap& some_edges) { ///\anchor anch
+		auto trim_selfs_redundants = [&](edge_multimap& some_edges) { // <a name = "tsr_def">definition</a>
 			for (unordered_map<Supernode, decltype(iter)> connections;
 				  cauto & supernode : supernodes
 				  | views::filter([](cauto& x) { return x.any(); }))
@@ -130,9 +130,9 @@ public:
 				else some_edges.erase(iter++);
 				connections.clear();
 			}
-		}; ///\link anch definition \endlink
+		}; ///<a href="graph_8cpp_source.html#tsr_def"></a>
 		trim_selfs_redundants(edges);
-		auto rmst = [&](this auto self, edge_multimap& input) { /// \see [definition](graph_8cpp_source.html#l00136)
+		auto rmst = [&](this auto self, edge_multimap& input) {
 			edge_set boruvkas{};
 			auto boruvka = [&]() {
 				edge_set buffer{};
