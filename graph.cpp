@@ -105,6 +105,7 @@ public:
 		*/
 		///Inner_class inner class
 		/** yet again doesn't it give a shit */
+		struct Str {int data1; int data2; double data3;};
 		for (auto i{ this->cbegin() }; i != this->cend(); ++i) {
 			supernodes[i->origin].set(i->origin);
 			nodes[i->origin] = supernodes.begin() + i->origin;
