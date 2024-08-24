@@ -110,7 +110,7 @@ public:
 		/**trim one of the subroutines of boruvka()
 		/ should be used once on the original graph,
 		incase it already contains self loops or redundant edges
-		\see <a href="graph_8cpp_source.html#tsr_def">definition</a>
+		\see <a href="#tsr_def">definition</a>
 		\see \ref anch some reference
 		*/
 		auto trim_selfs_redundants = [&](edge_multimap& some_edges) { /** <a name = "tsr_def">def</a> */
@@ -137,8 +137,8 @@ public:
 		auto rmst = [&](this auto self, edge_multimap& input) {
 			edge_set boruvkas{};
 			/** boruvka() documentation
-				\see <a href="graph_8cpp_source.html#boruvka_def">definition</a>
-				\see <a href="graph_8cpp_source.html#cycle">cycle</a>
+				\see <a href="#boruvka_def">definition</a>
+				\see <a href="graph_cpp.html#cycle">cycle</a>
 			*/
 			auto boruvka = [&]() { /* <a ID = "boruvka_def">definition</a> */
 				edge_set buffer{};
