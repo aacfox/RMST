@@ -1,6 +1,6 @@
 var modules_dup =
 [
-    [ "boilerplate", "module_boilerplate.html", "module_boilerplate" ],
-    [ "graph", "module_graph.html", "module_graph" ],
-    [ "main", "module_main.html", "module_main" ]
+    [ "boilerplate", "module__boilerplate.html", "module__boilerplate" ],
+    [ "graph", "module__graph.html", "module__graph" ],
+    [ "main", "module__main.html", "module__main" ]
 ];

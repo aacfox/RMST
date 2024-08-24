@@ -2,14 +2,14 @@
 <area shape="rect" id="Node000001" title="Mermaid code generator." alt="" coords="5,76,118,102"/>
 <area shape="rect" id="Node000002" href="$classGraph.html#a357809e14f80ad72bd3d007b37d77e05" title=" " alt="" coords="302,13,402,39"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="74,74,112,41,137,24,165,12,195,5,227,3,287,8,286,13,227,8,196,10,167,17,140,29,115,45,77,78"/>
-<area shape="rect" id="Node000003" href="$classGraph.html#add1a0288b625e7faef730b21dc50a1f8" title=" " alt="" coords="307,83,397,108"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="118,88,292,92,292,97,118,93"/>
-<area shape="rect" id="Node000004" href="$classGraph.html#ad36737ebb96cfacbffe6204ad5f2d7b1" title=" " alt="" coords="298,132,406,158"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="119,97,283,129,282,134,118,102"/>
+<area shape="rect" id="Node000003" href="$classGraph.html#add1a0288b625e7faef730b21dc50a1f8" title=" " alt="" coords="307,101,397,127"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="118,91,292,106,291,112,118,96"/>
+<area shape="rect" id="Node000004" href="$classGraph.html#ad36737ebb96cfacbffe6204ad5f2d7b1" title=" " alt="" coords="298,151,406,176"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="115,100,285,144,283,149,114,105"/>
 <area shape="rect" id="Node000005" href="$classGraph.html#a3601c6a236196c427f9fc475eacf57bb" title="The actual RMST." alt="" coords="166,51,250,76"/>
 <area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="118,77,150,71,151,76,118,82"/>
 <area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="250,50,286,41,288,46,251,55"/>
-<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="251,70,293,80,291,85,250,76"/>
-<area shape="poly" id="edge7_Node000005_Node000004" title=" " alt="" coords="229,75,299,119,307,123,305,127,297,123,227,79"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="248,75,300,93,299,98,246,80"/>
+<area shape="poly" id="edge7_Node000005_Node000004" title=" " alt="" coords="224,75,257,105,299,137,306,141,303,146,297,142,253,109,220,79"/>
 <area shape="poly" id="edge8_Node000005_Node000005" title=" " alt="" coords="183,52,178,42,181,33,191,26,208,24,226,27,235,33,232,38,224,32,208,29,193,31,185,36,184,42,188,49"/>
 </map>

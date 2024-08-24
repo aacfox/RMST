@@ -1,4 +1,4 @@
-var module_graph =
+var module__graph =
 [
     [ "Graph", "classGraph.html", "classGraph" ]
 ];
