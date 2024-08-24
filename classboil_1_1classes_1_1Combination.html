@@ -208,7 +208,10 @@ template&lt;ranges::sized_range R&gt; </div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="boilerplate_8cpp_source.html#l00063">63</a> of file <a class="el" href="boilerplate_8cpp_source.html">boilerplate.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   63</span>: <a class="code hl_class" href="classboil_1_1classes_1_1Combination.html">Combination</a>(<a class="code hl_variable" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">range</a>.size(), <a class="code hl_variable" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">k</a>) {}</div>
+<div class="ttc" id="aclassboil_1_1classes_1_1Combination_html"><div class="ttname"><a href="classboil_1_1classes_1_1Combination.html">boil::Combination</a></div><div class="ttdef"><b>Definition</b> <a href="boilerplate_8cpp_source.html#l00059">boilerplate.cpp:59</a></div></div>
+<div class="ttc" id="anamespaceboil_1_1utilities_html_af4fbd541ada4a7eecf3b675d77457d2c"><div class="ttname"><a href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">boil::utilities::min_v</a></div><div class="ttdeci">constexpr auto min_v</div><div class="ttdef"><b>Definition</b> <a href="boilerplate_8cpp_source.html#l00026">boilerplate.cpp:26</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -236,7 +239,19 @@ template&lt;ranges::sized_range R&gt; </div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="boilerplate_8cpp_source.html#l00129">129</a> of file <a class="el" href="boilerplate_8cpp_source.html">boilerplate.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  129</span>                     {</div>
+<div class="line"><span class="lineno">  130</span>    <a class="code hl_define" href="boilerplate_8cpp.html#a8f438fe31579af4c0a3d9c169da09021">cauto</a> <a class="code hl_variable" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">old</a>{ <a class="code hl_variable" href="classboil_1_1classes_1_1Combination.html#a6f91596bcec7c8172b41555d7ea95460">_ok</a> };</div>
+<div class="line"><span class="lineno">  131</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classboil_1_1classes_1_1Combination.html#a102904597053bfec73678466759a07a4">_pointers</a>[0] == <a class="code hl_variable" href="classboil_1_1classes_1_1Combination.html#ad59686230c97866e6fd5ba76032e64c1">_n</a> - <a class="code hl_variable" href="classboil_1_1classes_1_1Combination.html#a3cfe7e3f887bcf325d2308c67aa4316d">_k</a>)</div>
+<div class="line"><span class="lineno">  132</span>        <a class="code hl_variable" href="classboil_1_1classes_1_1Combination.html#a6f91596bcec7c8172b41555d7ea95460">_ok</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  133</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">old</a>;</div>
+<div class="line"><span class="lineno">  134</span> </div>
+<div class="line"><span class="lineno">  135</span>}</div>
+<div class="ttc" id="aboilerplate_8cpp_html_a8f438fe31579af4c0a3d9c169da09021"><div class="ttname"><a href="boilerplate_8cpp.html#a8f438fe31579af4c0a3d9c169da09021">cauto</a></div><div class="ttdeci">#define cauto</div><div class="ttdef"><b>Definition</b> <a href="boilerplate_8cpp_source.html#l00002">boilerplate.cpp:2</a></div></div>
+<div class="ttc" id="aclassboil_1_1classes_1_1Combination_html_a102904597053bfec73678466759a07a4"><div class="ttname"><a href="classboil_1_1classes_1_1Combination.html#a102904597053bfec73678466759a07a4">boil::classes::Combination::_pointers</a></div><div class="ttdeci">vector&lt; size_t &gt; _pointers</div><div class="ttdef"><b>Definition</b> <a href="boilerplate_8cpp_source.html#l00071">boilerplate.cpp:71</a></div></div>
+<div class="ttc" id="aclassboil_1_1classes_1_1Combination_html_a3cfe7e3f887bcf325d2308c67aa4316d"><div class="ttname"><a href="classboil_1_1classes_1_1Combination.html#a3cfe7e3f887bcf325d2308c67aa4316d">boil::classes::Combination::_k</a></div><div class="ttdeci">const size_t _k</div><div class="ttdef"><b>Definition</b> <a href="boilerplate_8cpp_source.html#l00070">boilerplate.cpp:70</a></div></div>
+<div class="ttc" id="aclassboil_1_1classes_1_1Combination_html_a6f91596bcec7c8172b41555d7ea95460"><div class="ttname"><a href="classboil_1_1classes_1_1Combination.html#a6f91596bcec7c8172b41555d7ea95460">boil::classes::Combination::_ok</a></div><div class="ttdeci">bool _ok</div><div class="ttdef"><b>Definition</b> <a href="boilerplate_8cpp_source.html#l00072">boilerplate.cpp:72</a></div></div>
+<div class="ttc" id="aclassboil_1_1classes_1_1Combination_html_ad59686230c97866e6fd5ba76032e64c1"><div class="ttname"><a href="classboil_1_1classes_1_1Combination.html#ad59686230c97866e6fd5ba76032e64c1">boil::classes::Combination::_n</a></div><div class="ttdeci">const size_t _n</div><div class="ttdef"><b>Definition</b> <a href="boilerplate_8cpp_source.html#l00069">boilerplate.cpp:69</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a753b06e9e45784eaa42a61072a7e9e87" name="a753b06e9e45784eaa42a61072a7e9e87"></a>
@@ -263,7 +278,8 @@ template&lt;ranges::sized_range R&gt; </div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="boilerplate_8cpp_source.html#l00064">64</a> of file <a class="el" href="boilerplate_8cpp_source.html">boilerplate.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   64</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classboil_1_1classes_1_1Combination.html#a102904597053bfec73678466759a07a4">_pointers</a>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="abf9e8ffd2e3cacb04be0584eec66984b" name="abf9e8ffd2e3cacb04be0584eec66984b"></a>
@@ -290,7 +306,19 @@ template&lt;ranges::sized_range R&gt; </div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="boilerplate_8cpp_source.html#l00114">114</a> of file <a class="el" href="boilerplate_8cpp_source.html">boilerplate.cpp</a>.</p>
-<div class="dynheader">
+<div class="fragment"><div class="line"><span class="lineno">  114</span>                                     {</div>
+<div class="line"><span class="lineno">  115</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_variable" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">forwarded</a>{}; <span class="keyword">auto</span> &amp; <a class="code hl_variable" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">i</a> : <a class="code hl_variable" href="classboil_1_1classes_1_1Combination.html#a102904597053bfec73678466759a07a4">_pointers</a> | views::reverse) {</div>
+<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">i</a> + 1 != <a class="code hl_variable" href="classboil_1_1classes_1_1Combination.html#ad59686230c97866e6fd5ba76032e64c1">_n</a> - <a class="code hl_variable" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">forwarded</a>) <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  118</span>            <a class="code hl_variable" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">i</a> = 0;</div>
+<div class="line"><span class="lineno">  119</span>            ++<a class="code hl_variable" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">forwarded</a>;</div>
+<div class="line"><span class="lineno">  120</span>        }</div>
+<div class="line"><span class="lineno">  121</span>    }</div>
+<div class="line"><span class="lineno">  122</span>    <a class="code hl_function" href="classboil_1_1classes_1_1Combination.html#aff8e2c88fd9cab0de141c9ac597931f5">restore</a>();</div>
+<div class="line"><span class="lineno">  123</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  124</span>}</div>
+<div class="ttc" id="aclassboil_1_1classes_1_1Combination_html_aff8e2c88fd9cab0de141c9ac597931f5"><div class="ttname"><a href="classboil_1_1classes_1_1Combination.html#aff8e2c88fd9cab0de141c9ac597931f5">boil::classes::Combination::restore</a></div><div class="ttdeci">void restore()</div><div class="ttdef"><b>Definition</b> <a href="boilerplate_8cpp_source.html#l00125">boilerplate.cpp:125</a></div></div>
+</div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classboil_1_1classes_1_1Combination_abf9e8ffd2e3cacb04be0584eec66984b_cgraph.png" border="0" usemap="#aclassboil_1_1classes_1_1Combination_abf9e8ffd2e3cacb04be0584eec66984b_cgraph" alt=""/></div>
@@ -327,7 +355,11 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="boilerplate_8cpp_source.html#l00125">125</a> of file <a class="el" href="boilerplate_8cpp_source.html">boilerplate.cpp</a>.</p>
-<div class="dynheader">
+<div class="fragment"><div class="line"><span class="lineno">  125</span>                          {</div>
+<div class="line"><span class="lineno">  126</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> [<a class="code hl_variable" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">i</a>, <a class="code hl_variable" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">j</a>] : <a class="code hl_variable" href="classboil_1_1classes_1_1Combination.html#a102904597053bfec73678466759a07a4">_pointers</a> | <a class="code hl_variable" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">views</a>::<a class="code hl_variable" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">adjacent</a>&lt;2&gt;)</div>
+<div class="line"><span class="lineno">  127</span>        <a class="code hl_variable" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">if</a> (<a class="code hl_variable" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">i</a> &gt;= <a class="code hl_variable" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">j</a>) <a class="code hl_variable" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">j</a> = <a class="code hl_variable" href="namespaceboil_1_1utilities.html#af4fbd541ada4a7eecf3b675d77457d2c">i</a> + 1;</div>
+<div class="line"><span class="lineno">  128</span>}</div>
+</div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classboil_1_1classes_1_1Combination_aff8e2c88fd9cab0de141c9ac597931f5_icgraph.png" border="0" usemap="#aclassboil_1_1classes_1_1Combination_aff8e2c88fd9cab0de141c9ac597931f5_icgraph" alt=""/></div>
@@ -410,7 +442,8 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="boilerplate_8cpp_source.html#l00072">72</a> of file <a class="el" href="boilerplate_8cpp_source.html">boilerplate.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   72</span>{ <span class="keyword">true</span> };</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a102904597053bfec73678466759a07a4" name="a102904597053bfec73678466759a07a4"></a>
