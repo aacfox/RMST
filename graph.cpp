@@ -110,10 +110,8 @@ public:
 		///trim one of the subroutines of boruvka()
 		/** should be used once on the original graph,
 		incase it already contains self loops or redundant edges
-		\snippet{doc} graph_8cpp_source.html XXX
 		*/
-		/// [XXX]
-		auto trim_selfs_redundants = [&](edge_multimap& some_edges) {
+		auto trim_selfs_redundants = [&](edge_multimap& some_edges) { ///\anchor anch
 			for (unordered_map<Supernode, decltype(iter)> connections;
 				  cauto & supernode : supernodes
 				  | views::filter([](cauto& x) { return x.any(); }))
@@ -132,10 +130,9 @@ public:
 				else some_edges.erase(iter++);
 				connections.clear();
 			}
-		};
-		/// [XXX]
+		}; ///\link anch definition \endlink
 		trim_selfs_redundants(edges);
-		auto rmst = [&](this auto self, edge_multimap& input) { /// \sa [definition](graph_8cpp_source.html#l00138)
+		auto rmst = [&](this auto self, edge_multimap& input) { /// \see [definition](graph_8cpp_source.html#l00136)
 			edge_set boruvkas{};
 			auto boruvka = [&]() {
 				edge_set buffer{};
