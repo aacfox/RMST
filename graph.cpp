@@ -91,21 +91,14 @@ public:
 	///The actual RMST
 	/** \throws boil::Exception if the last's vertex id is bigger than template parameter */
 	template <size_t vertices_upper_bound = 1024> Graph mst() const {
-		///It's a typedef
-		/** But doxygen doesn't give a shit... */
 		using Supernode = bitset<vertices_upper_bound>;
 		using edge_multimap = unordered_multimap<Supernode, Edge>;
 		if (vertices_upper_bound < fresh_id()) throw Exception{
 			"Default template argument for number of vertices (which is 1024) proved insufficient." };
-		edge_multimap edges{}; ///< bitset-based hash map for easier node combining
-		vector<Supernode> supernodes(fresh_id()); ///< vector for tracking remaining supernodes
-		///disjoint set of original nodes \anchor anch
-		vector nodes(fresh_id(), supernodes.end()); /**< the latter two can be interpreted as nonoptimized-memory-wise hash maps:
-		vertice_ID -> respective_type
-		*/
-		///Inner_class inner class
-		/** yet again doesn't it give a shit */
-		struct Str {int data1; int data2; double data3;};
+		edge_multimap edges{}; //< bitset-based hash map for easier node combining
+		vector<Supernode> supernodes(fresh_id()); //< vector for tracking remaining supernodes
+		//disjoint set of original nodes \anchor anch
+		vector nodes(fresh_id(), supernodes.end()); //< the latter two can be interpreted as nonoptimized-memory-wise hash maps: vertice_ID -> respective_type
 		for (auto i{ this->cbegin() }; i != this->cend(); ++i) {
 			supernodes[i->origin].set(i->origin);
 			nodes[i->origin] = supernodes.begin() + i->origin;
@@ -144,9 +137,9 @@ public:
 				\see <a href="graph_8cpp_source.html#boruvka_def">definition</a>
 				\see <a href="graph_8cpp_source.html#cycle">cycle</a>
 			*/
-			auto boruvka = [&]() { /// <a ID = "boruvka_def">definition</a>
+			auto boruvka = [&]() { // <a ID = "boruvka_def">definition</a>
 				edge_set buffer{};
-				///choosing-incident-edges cycle:
+				//choosing-incident-edges cycle:
 				for (auto lightest{ iter }; cauto & node : supernodes
 					  | views::filter([](cauto& x) { return x.any(); })) {
 					tie(iter, sentinel) = input.equal_range(node);
@@ -154,7 +147,7 @@ public:
 						return x.second.weight < y.second.weight; });
 					if (lightest != sentinel) buffer.insert(input.extract(lightest).mapped());
 				}
-				///contracting cycle:
+				//contracting cycle:
 				for (auto absorbing{ supernodes.end() }, absorbed{ absorbing }; // <a name = "cycle">prrt</a>
 					  cauto & edge : buffer) {
 					absorbing = nodes[edge.origin];
@@ -190,7 +183,7 @@ public:
 			boruvka();
 			boruvka();
 			edge_multimap subgraph;
-			subgraph.reserve(input.bucket_count()); ///to prevent rehashing
+			subgraph.reserve(input.bucket_count()); //to prevent rehashing
 			for (auto yes_no{ randomizer(0, 1) }; cauto edge : input)
 				if (yes_no()) subgraph.emplace(move(edge));
 			erase_f_heavies(self(subgraph));
@@ -198,7 +191,7 @@ public:
 			return boruvkas;
 		};
 		edge_set mst_edges{ rmst(edges) };
-		Graph mst; ///time to restore invariants:
+		Graph mst; //time to restore invariants:
 		mst._fresh_id = _fresh_id;
 		for (mst._edge_list.reserve(2 * mst_edges.size());
 			  auto & edge: mst_edges) {

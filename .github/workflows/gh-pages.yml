@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Doxygen Action
-        uses: mattnotmitt/doxygen-action@v1.9.8
+        uses: mattnotmitt/doxygen-action@edge
         with:
           doxyfile-path: "./docs/Doxyfile"
 
