@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tasks_0',['Tasks',['../md_docs_2CONTRIBUTING.md',1,'']]]
+  ['tasks_0',['Tasks',['../md_docs_2CONTRIBUTING.html',1,'']]]
 ];

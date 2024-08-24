@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rmst_0',['RMST',['../index.md',1,'']]]
+  ['rmst_0',['RMST',['../index.html',1,'']]]
 ];

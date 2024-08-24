@@ -24,62 +24,62 @@
 */
 var NAVTREE =
 [
-  [ "RMST", "index.md", [
-    [ "Introduction", "index.md#autotoc_md5", null ],
-    [ "What it does", "index.md#autotoc_md6", [
-      [ "Limitations so far", "index.md#autotoc_md7", null ]
+  [ "RMST", "index.html", [
+    [ "Introduction", "index.html#autotoc_md5", null ],
+    [ "What it does", "index.html#autotoc_md6", [
+      [ "Limitations so far", "index.html#autotoc_md7", null ]
     ] ],
-    [ "Get started", "index.md#autotoc_md8", [
-      [ "The algorithm's source code", "index.md#autotoc_md9", null ],
-      [ "Dependencies", "index.md#autotoc_md10", null ]
+    [ "Get started", "index.html#autotoc_md8", [
+      [ "The algorithm's source code", "index.html#autotoc_md9", null ],
+      [ "Dependencies", "index.html#autotoc_md10", null ]
     ] ],
-    [ "References", "index.md#autotoc_md11", [
-      [ "Randomized O(m) MST algo", "index.md#autotoc_md12", null ],
-      [ "Other cool MST algos", "index.md#autotoc_md13", null ]
+    [ "References", "index.html#autotoc_md11", [
+      [ "Randomized O(m) MST algo", "index.html#autotoc_md12", null ],
+      [ "Other cool MST algos", "index.html#autotoc_md13", null ]
     ] ],
-    [ "Tasks", "md_docs_2CONTRIBUTING.md", [
-      [ "Test cases", "md_docs_2CONTRIBUTING.md#autotoc_md1", [
-        [ "Example", "md_docs_2CONTRIBUTING.md#autotoc_md2", null ],
-        [ "Boruvka's subroutine test", "md_docs_2CONTRIBUTING.md#autotoc_md3", null ]
+    [ "Tasks", "md_docs_2CONTRIBUTING.html", [
+      [ "Test cases", "md_docs_2CONTRIBUTING.html#autotoc_md1", [
+        [ "Example", "md_docs_2CONTRIBUTING.html#autotoc_md2", null ],
+        [ "Boruvka's subroutine test", "md_docs_2CONTRIBUTING.html#autotoc_md3", null ]
       ] ]
     ] ],
-    [ "Modules", "modules.md", [
-      [ "Modules List", "modules.md", "modules_dup" ],
-      [ "Module Members", "modulemembers.md", [
-        [ "All", "modulemembers.md", null ],
-        [ "Functions", "modulemembers_func.md", null ],
-        [ "Variables", "modulemembers_vars.md", null ],
-        [ "Enumerations", "modulemembers_enum.md", null ]
+    [ "Modules", "modules.html", [
+      [ "Modules List", "modules.html", "modules_dup" ],
+      [ "Module Members", "modulemembers.html", [
+        [ "All", "modulemembers.html", null ],
+        [ "Functions", "modulemembers_func.html", null ],
+        [ "Variables", "modulemembers_vars.html", null ],
+        [ "Enumerations", "modulemembers_enum.html", null ]
       ] ]
     ] ],
-    [ "Namespaces", "namespaces.md", [
-      [ "Namespace List", "namespaces.md", "namespaces_dup" ],
-      [ "Namespace Members", "namespacemembers.md", [
-        [ "All", "namespacemembers.md", null ],
-        [ "Functions", "namespacemembers_func.md", null ],
-        [ "Variables", "namespacemembers_vars.md", null ],
-        [ "Enumerations", "namespacemembers_enum.md", null ]
+    [ "Namespaces", "namespaces.html", [
+      [ "Namespace List", "namespaces.html", "namespaces_dup" ],
+      [ "Namespace Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ],
+        [ "Variables", "namespacemembers_vars.html", null ],
+        [ "Enumerations", "namespacemembers_enum.html", null ]
       ] ]
     ] ],
-    [ "Concepts", "concepts.md", "concepts" ],
-    [ "Classes", "annotated.md", [
-      [ "Class List", "annotated.md", "annotated_dup" ],
-      [ "Class Index", "classes.md", null ],
-      [ "Class Hierarchy", "hierarchy.md", "hierarchy" ],
-      [ "Class Members", "functions.md", [
-        [ "All", "functions.md", null ],
-        [ "Functions", "functions_func.md", null ],
-        [ "Variables", "functions_vars.md", null ],
-        [ "Typedefs", "functions_type.md", null ]
+    [ "Concepts", "concepts.html", "concepts" ],
+    [ "Classes", "annotated.html", [
+      [ "Class List", "annotated.html", "annotated_dup" ],
+      [ "Class Index", "classes.html", null ],
+      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
+      [ "Class Members", "functions.html", [
+        [ "All", "functions.html", null ],
+        [ "Functions", "functions_func.html", null ],
+        [ "Variables", "functions_vars.html", null ],
+        [ "Typedefs", "functions_type.html", null ]
       ] ]
     ] ],
-    [ "Files", "files.md", [
-      [ "File List", "files.md", "files_dup" ],
-      [ "File Members", "globals.md", [
-        [ "All", "globals.md", null ],
-        [ "Functions", "globals_func.md", null ],
-        [ "Variables", "globals_vars.md", null ],
-        [ "Macros", "globals_defs.md", null ]
+    [ "Files", "files.html", [
+      [ "File List", "files.html", "files_dup" ],
+      [ "File Members", "globals.html", [
+        [ "All", "globals.html", null ],
+        [ "Functions", "globals_func.html", null ],
+        [ "Variables", "globals_vars.html", null ],
+        [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
   ] ]
@@ -87,8 +87,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.md",
-"namespaceboil_1_1utilities.md#a4602626943325a0ca078e5a113c06d51"
+"annotated.html",
+"namespaceboil_1_1utilities.html#a4602626943325a0ca078e5a113c06d51"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

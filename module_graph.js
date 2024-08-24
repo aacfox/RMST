@@ -1,4 +1,4 @@
 var module_graph =
 [
-    [ "Graph", "classGraph.md", "classGraph" ]
+    [ "Graph", "classGraph.html", "classGraph" ]
 ];

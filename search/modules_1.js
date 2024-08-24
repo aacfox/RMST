@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['graph_0',['graph',['../module_graph.md',1,'']]]
+  ['graph_0',['graph',['../module_graph.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var namespaces_dup =
 [
-    [ "boil", "namespaceboil.md", "namespaceboil" ]
+    [ "boil", "namespaceboil.html", "namespaceboil" ]
 ];
