@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['edge_5fset_0',['edge_set',['../classGraph.html#ac55154201ac007d44a9b3e7819662891',1,'Graph']]]
+  ['edge_5fset_0',['edge_set',['../classboil_1_1Graph.html#aa4d0a60a1a862ee2a0e047811753b288',1,'boil::Graph']]]
 ];

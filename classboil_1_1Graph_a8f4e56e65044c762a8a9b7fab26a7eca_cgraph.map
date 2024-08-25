@@ -1,0 +1,15 @@
+<map id="boil::Graph::mermaid" name="boil::Graph::mermaid">
+<area shape="rect" id="Node000001" title="Mermaid code generator." alt="" coords="5,77,144,103"/>
+<area shape="rect" id="Node000002" href="$classboil_1_1Graph.html#adc03547c3e53a4f79784e8f621abdacf" title=" " alt="" coords="354,15,480,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,75,132,42,160,25,191,13,230,5,270,3,344,9,344,14,269,8,230,10,192,18,163,30,135,46,92,79"/>
+<area shape="rect" id="Node000003" href="$classboil_1_1Graph.html#adde17fa71a3f332f67f5cb01181b107a" title=" " alt="" coords="359,103,475,128"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="144,92,344,107,343,113,144,98"/>
+<area shape="rect" id="Node000004" href="$classboil_1_1Graph.html#a7adad960a05c4520cfc9ba9b96b28a45" title=" " alt="" coords="350,152,484,178"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="138,101,341,145,339,151,136,106"/>
+<area shape="rect" id="Node000005" href="$classboil_1_1Graph.html#ac607beb6076a198bb78529f0eb4f3a49" title="The actual RMST." alt="" coords="192,52,302,78"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="143,77,175,72,176,78,144,83"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="302,50,340,42,341,47,303,55"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="293,76,358,95,357,100,292,81"/>
+<area shape="poly" id="edge7_Node000005_Node000004" title=" " alt="" coords="265,76,303,107,351,138,360,143,358,148,349,143,300,111,261,80"/>
+<area shape="poly" id="edge8_Node000005_Node000005" title=" " alt="" coords="218,53,212,43,216,34,228,27,247,25,268,28,278,34,276,39,266,33,247,31,229,33,220,37,218,43,222,50"/>
+</map>

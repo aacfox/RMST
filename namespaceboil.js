@@ -6,8 +6,9 @@ var namespaceboil =
       [ "randomizer", "namespaceboil_1_1functions.html#a4887adf42671c9c0dccadc52487fd547", null ]
     ] ],
     [ "utilities", "namespaceboil_1_1utilities.html", "namespaceboil_1_1utilities" ],
-    [ "Combination", "classboil_1_1classes_1_1Combination.html", "classboil_1_1classes_1_1Combination" ],
     [ "Exception", "classboil_1_1classes_1_1Exception.html", "classboil_1_1classes_1_1Exception" ],
+    [ "Graph", "classboil_1_1Graph.html", "classboil_1_1Graph" ],
+    [ "Visitor", "structboil_1_1classes_1_1Visitor.html", null ],
     [ "order", "namespaceboil_1_1utilities.html#a9a0f42ff93c5f580e2246ac5fa24617a", [
       [ "equal", "namespaceboil.html#a9a0f42ff93c5f580e2246ac5fa24617aa465289687a70db7aa7217cc240c29f0f", null ],
       [ "equivalent", "namespaceboil.html#a9a0f42ff93c5f580e2246ac5fa24617aaa219d952c828c6dfd3c9e7465f0d29c4", null ],

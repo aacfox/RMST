@@ -1,7 +1,7 @@
 var boilerplate_8cpp =
 [
     [ "boil::classes::Exception", "classboil_1_1classes_1_1Exception.html", "classboil_1_1classes_1_1Exception" ],
-    [ "boil::classes::Combination", "classboil_1_1classes_1_1Combination.html", "classboil_1_1classes_1_1Combination" ],
+    [ "boil::classes::Visitor< Functors >", "structboil_1_1classes_1_1Visitor.html", null ],
     [ "boil::utilities::arithmetic", "conceptboil_1_1utilities_1_1arithmetic.html", null ],
     [ "cauto", "boilerplate_8cpp.html#a8f438fe31579af4c0a3d9c169da09021", null ],
     [ "order", "boilerplate_8cpp.html#a9a0f42ff93c5f580e2246ac5fa24617a", [

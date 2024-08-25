@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['weight_0',['weight',['../structGraph_1_1Edge.html#ae0bd6e614e5db65da1708957af5607eb',1,'Graph::Edge']]]
+  ['weight_0',['weight',['../structboil_1_1Graph_1_1Edge.html#a537ddaf9e66f0c7b68b21485875609a3',1,'boil::Graph::Edge']]]
 ];

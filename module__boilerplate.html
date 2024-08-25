@@ -109,7 +109,7 @@ $(function(){initNavTree('module__boilerplate.html',''); initResizable(true); })
   <div class="headertitle"><div class="title">boilerplate Module Reference</div></div>
 </div><!--header-->
 <div class="contents">
-</table><table class="memberdecls">
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="exports" name="exports"></a>
 Exported Modules</h2></td></tr>
 <tr class="memitem:std" id="r_std"><td class="memItemLeft" align="right" valign="top">module &#160;</td><td class="memItemRight" valign="bottom"><b>std</b></td></tr>
@@ -124,7 +124,7 @@ Concepts</h2></td></tr>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboil_1_1classes_1_1Exception.html">boil::classes::Exception</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboil_1_1classes_1_1Combination.html">boil::classes::Combination</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboil_1_1classes_1_1Visitor.html">boil::classes::Visitor&lt; Functors &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
@@ -152,27 +152,14 @@ Functions</h2></td></tr>
 requires same_as&lt;remove_cvref_t&lt;Path&gt;, path&gt;</td></tr>
 <tr class="memitem:a4602626943325a0ca078e5a113c06d51"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceboil_1_1utilities.html#a4602626943325a0ca078e5a113c06d51">boil::utilities::create_file</a> (Path &amp;&amp;p)</td></tr>
 <tr class="separator:a4602626943325a0ca078e5a113c06d51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64cb1dbb7265ca2e97d4a9dc3acc8f12" id="r_a64cb1dbb7265ca2e97d4a9dc3acc8f12"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboil_1_1classes_1_1Exception.html#a64cb1dbb7265ca2e97d4a9dc3acc8f12">Exception</a> (string_view info=&quot;Unknown exception.&quot;, source_location location=source_location::current(), stacktrace moment=stacktrace::current(1))</td></tr>
-<tr class="separator:a64cb1dbb7265ca2e97d4a9dc3acc8f12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9412196108c1efac65d0aa804abcc233" id="r_a9412196108c1efac65d0aa804abcc233"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboil_1_1classes_1_1Exception.html#a9412196108c1efac65d0aa804abcc233">Exception</a> (string_view what=&quot;Unknown exception.&quot;, source_location where=source_location::current(), stacktrace when=stacktrace::current(1))</td></tr>
+<tr class="separator:a9412196108c1efac65d0aa804abcc233"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a275be9f331ce3acfb85bd6d7bf48da78" id="r_a275be9f331ce3acfb85bd6d7bf48da78"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboil_1_1classes_1_1Exception.html#a275be9f331ce3acfb85bd6d7bf48da78">what</a> () const noexcept override</td></tr>
 <tr class="separator:a275be9f331ce3acfb85bd6d7bf48da78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d51ef0e7016aaedba6e1ce034aff686" id="r_a0d51ef0e7016aaedba6e1ce034aff686"><td class="memItemLeft" align="right" valign="top">virtual const source_location &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboil_1_1classes_1_1Exception.html#a0d51ef0e7016aaedba6e1ce034aff686">where</a> () const noexcept</td></tr>
 <tr class="separator:a0d51ef0e7016aaedba6e1ce034aff686"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fd67224f0764f45b11cff42ab2115b0" id="r_a1fd67224f0764f45b11cff42ab2115b0"><td class="memItemLeft" align="right" valign="top">virtual const stacktrace &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboil_1_1classes_1_1Exception.html#a1fd67224f0764f45b11cff42ab2115b0">when</a> () const noexcept</td></tr>
 <tr class="separator:a1fd67224f0764f45b11cff42ab2115b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a012f81fa840966543a9cc4a58d4b0a9c" id="r_a012f81fa840966543a9cc4a58d4b0a9c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboil_1_1classes_1_1Combination.html#a012f81fa840966543a9cc4a58d4b0a9c">Combination</a> (size_t, size_t)</td></tr>
-<tr class="separator:a012f81fa840966543a9cc4a58d4b0a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53deae884c0edaa2a5080880f055f790" id="r_a53deae884c0edaa2a5080880f055f790"><td class="memTemplParams" colspan="2">template&lt;ranges::sized_range R&gt; </td></tr>
-<tr class="memitem:a53deae884c0edaa2a5080880f055f790"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classboil_1_1classes_1_1Combination.html#a53deae884c0edaa2a5080880f055f790">Combination</a> (R range, size_t k)</td></tr>
-<tr class="separator:a53deae884c0edaa2a5080880f055f790"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a753b06e9e45784eaa42a61072a7e9e87" id="r_a753b06e9e45784eaa42a61072a7e9e87"><td class="memItemLeft" align="right" valign="top">span&lt; const size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboil_1_1classes_1_1Combination.html#a753b06e9e45784eaa42a61072a7e9e87">operator*</a> ()</td></tr>
-<tr class="separator:a753b06e9e45784eaa42a61072a7e9e87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf9e8ffd2e3cacb04be0584eec66984b" id="r_abf9e8ffd2e3cacb04be0584eec66984b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classboil_1_1classes_1_1Combination.html">Combination</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboil_1_1classes_1_1Combination.html#abf9e8ffd2e3cacb04be0584eec66984b">operator++</a> ()</td></tr>
-<tr class="separator:abf9e8ffd2e3cacb04be0584eec66984b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6cb6ddb175bbe3f9c7d7f2bfd19006d" id="r_ac6cb6ddb175bbe3f9c7d7f2bfd19006d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboil_1_1classes_1_1Combination.html#ac6cb6ddb175bbe3f9c7d7f2bfd19006d">ok</a> ()</td></tr>
-<tr class="separator:ac6cb6ddb175bbe3f9c7d7f2bfd19006d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff8e2c88fd9cab0de141c9ac597931f5" id="r_aff8e2c88fd9cab0de141c9ac597931f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboil_1_1classes_1_1Combination.html#aff8e2c88fd9cab0de141c9ac597931f5">restore</a> ()</td></tr>
-<tr class="separator:aff8e2c88fd9cab0de141c9ac597931f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4887adf42671c9c0dccadc52487fd547" id="r_a4887adf42671c9c0dccadc52487fd547"><td class="memTemplParams" colspan="2">template&lt;arithmetic T&gt; </td></tr>
 <tr class="memitem:a4887adf42671c9c0dccadc52487fd547"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceboil_1_1functions.html#a4887adf42671c9c0dccadc52487fd547">boil::functions::randomizer</a> (T min=min_v&lt; T &gt;, T max=max_v&lt; T &gt;)</td></tr>
 <tr class="separator:a4887adf42671c9c0dccadc52487fd547"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -192,20 +179,12 @@ Variables</h2></td></tr>
 <tr class="separator:af4fbd541ada4a7eecf3b675d77457d2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10ff03c01a73c319b413c145f074869a" id="r_a10ff03c01a73c319b413c145f074869a"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceboil_1_1utilities.html#a10ff03c01a73c319b413c145f074869a">boil::utilities::hash_combine</a></td></tr>
 <tr class="separator:a10ff03c01a73c319b413c145f074869a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b90febf541388d1fc53861f4eb1d3f0" id="r_a2b90febf541388d1fc53861f4eb1d3f0"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboil_1_1classes_1_1Exception.html#a2b90febf541388d1fc53861f4eb1d3f0">_info</a></td></tr>
-<tr class="separator:a2b90febf541388d1fc53861f4eb1d3f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9b438099fb3dc70316dcc22d7ce80ea" id="r_ac9b438099fb3dc70316dcc22d7ce80ea"><td class="memItemLeft" align="right" valign="top">source_location&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboil_1_1classes_1_1Exception.html#ac9b438099fb3dc70316dcc22d7ce80ea">_location</a></td></tr>
-<tr class="separator:ac9b438099fb3dc70316dcc22d7ce80ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac71a8d995ff4b13064971815584ee6b9" id="r_ac71a8d995ff4b13064971815584ee6b9"><td class="memItemLeft" align="right" valign="top">stacktrace&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboil_1_1classes_1_1Exception.html#ac71a8d995ff4b13064971815584ee6b9">_moment</a></td></tr>
-<tr class="separator:ac71a8d995ff4b13064971815584ee6b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad59686230c97866e6fd5ba76032e64c1" id="r_ad59686230c97866e6fd5ba76032e64c1"><td class="memItemLeft" align="right" valign="top">const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboil_1_1classes_1_1Combination.html#ad59686230c97866e6fd5ba76032e64c1">_n</a></td></tr>
-<tr class="separator:ad59686230c97866e6fd5ba76032e64c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cfe7e3f887bcf325d2308c67aa4316d" id="r_a3cfe7e3f887bcf325d2308c67aa4316d"><td class="memItemLeft" align="right" valign="top">const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboil_1_1classes_1_1Combination.html#a3cfe7e3f887bcf325d2308c67aa4316d">_k</a></td></tr>
-<tr class="separator:a3cfe7e3f887bcf325d2308c67aa4316d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a102904597053bfec73678466759a07a4" id="r_a102904597053bfec73678466759a07a4"><td class="memItemLeft" align="right" valign="top">vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboil_1_1classes_1_1Combination.html#a102904597053bfec73678466759a07a4">_pointers</a></td></tr>
-<tr class="separator:a102904597053bfec73678466759a07a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f91596bcec7c8172b41555d7ea95460" id="r_a6f91596bcec7c8172b41555d7ea95460"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboil_1_1classes_1_1Combination.html#a6f91596bcec7c8172b41555d7ea95460">_ok</a> { true }</td></tr>
-<tr class="separator:a6f91596bcec7c8172b41555d7ea95460"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19e1fb1d09f3ccd35d85769f4ee2b770" id="r_a19e1fb1d09f3ccd35d85769f4ee2b770"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboil_1_1classes_1_1Exception.html#a19e1fb1d09f3ccd35d85769f4ee2b770">_what</a></td></tr>
+<tr class="separator:a19e1fb1d09f3ccd35d85769f4ee2b770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a123c6402c35cf9ab3b65254edd848c7f" id="r_a123c6402c35cf9ab3b65254edd848c7f"><td class="memItemLeft" align="right" valign="top">source_location&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboil_1_1classes_1_1Exception.html#a123c6402c35cf9ab3b65254edd848c7f">_where</a></td></tr>
+<tr class="separator:a123c6402c35cf9ab3b65254edd848c7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0cb70d6bedd7b033d2f5ec91fb16339" id="r_ad0cb70d6bedd7b033d2f5ec91fb16339"><td class="memItemLeft" align="right" valign="top">stacktrace&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboil_1_1classes_1_1Exception.html#ad0cb70d6bedd7b033d2f5ec91fb16339">_when</a></td></tr>
+<tr class="separator:ad0cb70d6bedd7b033d2f5ec91fb16339"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="files" name="files"></a>

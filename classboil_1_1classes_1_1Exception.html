@@ -129,8 +129,8 @@ Collaboration diagram for boil::classes::Exception:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a64cb1dbb7265ca2e97d4a9dc3acc8f12" id="r_a64cb1dbb7265ca2e97d4a9dc3acc8f12"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64cb1dbb7265ca2e97d4a9dc3acc8f12">Exception</a> (string_view info=&quot;Unknown exception.&quot;, source_location location=source_location::current(), stacktrace moment=stacktrace::current(1))</td></tr>
-<tr class="separator:a64cb1dbb7265ca2e97d4a9dc3acc8f12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9412196108c1efac65d0aa804abcc233" id="r_a9412196108c1efac65d0aa804abcc233"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9412196108c1efac65d0aa804abcc233">Exception</a> (string_view <a class="el" href="#a275be9f331ce3acfb85bd6d7bf48da78">what</a>=&quot;Unknown exception.&quot;, source_location <a class="el" href="#a0d51ef0e7016aaedba6e1ce034aff686">where</a>=source_location::current(), stacktrace <a class="el" href="#a1fd67224f0764f45b11cff42ab2115b0">when</a>=stacktrace::current(1))</td></tr>
+<tr class="separator:a9412196108c1efac65d0aa804abcc233"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a275be9f331ce3acfb85bd6d7bf48da78" id="r_a275be9f331ce3acfb85bd6d7bf48da78"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a275be9f331ce3acfb85bd6d7bf48da78">what</a> () const noexcept override</td></tr>
 <tr class="separator:a275be9f331ce3acfb85bd6d7bf48da78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d51ef0e7016aaedba6e1ce034aff686" id="r_a0d51ef0e7016aaedba6e1ce034aff686"><td class="memItemLeft" align="right" valign="top">virtual const source_location &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d51ef0e7016aaedba6e1ce034aff686">where</a> () const noexcept</td></tr>
@@ -140,19 +140,19 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a2b90febf541388d1fc53861f4eb1d3f0" id="r_a2b90febf541388d1fc53861f4eb1d3f0"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b90febf541388d1fc53861f4eb1d3f0">_info</a></td></tr>
-<tr class="separator:a2b90febf541388d1fc53861f4eb1d3f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9b438099fb3dc70316dcc22d7ce80ea" id="r_ac9b438099fb3dc70316dcc22d7ce80ea"><td class="memItemLeft" align="right" valign="top">source_location&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9b438099fb3dc70316dcc22d7ce80ea">_location</a></td></tr>
-<tr class="separator:ac9b438099fb3dc70316dcc22d7ce80ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac71a8d995ff4b13064971815584ee6b9" id="r_ac71a8d995ff4b13064971815584ee6b9"><td class="memItemLeft" align="right" valign="top">stacktrace&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac71a8d995ff4b13064971815584ee6b9">_moment</a></td></tr>
-<tr class="separator:ac71a8d995ff4b13064971815584ee6b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19e1fb1d09f3ccd35d85769f4ee2b770" id="r_a19e1fb1d09f3ccd35d85769f4ee2b770"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19e1fb1d09f3ccd35d85769f4ee2b770">_what</a></td></tr>
+<tr class="separator:a19e1fb1d09f3ccd35d85769f4ee2b770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a123c6402c35cf9ab3b65254edd848c7f" id="r_a123c6402c35cf9ab3b65254edd848c7f"><td class="memItemLeft" align="right" valign="top">source_location&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a123c6402c35cf9ab3b65254edd848c7f">_where</a></td></tr>
+<tr class="separator:a123c6402c35cf9ab3b65254edd848c7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0cb70d6bedd7b033d2f5ec91fb16339" id="r_ad0cb70d6bedd7b033d2f5ec91fb16339"><td class="memItemLeft" align="right" valign="top">stacktrace&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0cb70d6bedd7b033d2f5ec91fb16339">_when</a></td></tr>
+<tr class="separator:ad0cb70d6bedd7b033d2f5ec91fb16339"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="boilerplate_8cpp_source.html#l00043">43</a> of file <a class="el" href="boilerplate_8cpp_source.html">boilerplate.cpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a64cb1dbb7265ca2e97d4a9dc3acc8f12" name="a64cb1dbb7265ca2e97d4a9dc3acc8f12"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64cb1dbb7265ca2e97d4a9dc3acc8f12">&#9670;&#160;</a></span>Exception()</h2>
+<a id="a9412196108c1efac65d0aa804abcc233" name="a9412196108c1efac65d0aa804abcc233"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9412196108c1efac65d0aa804abcc233">&#9670;&#160;</a></span>Exception()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -163,17 +163,17 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">boil::classes::Exception::Exception </td>
           <td>(</td>
-          <td class="paramtype">string_view</td>          <td class="paramname"><span class="paramname"><em>info</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;Unknown&#160;exception.&quot;</span>, </td>
+          <td class="paramtype">string_view</td>          <td class="paramname"><span class="paramname"><em>what</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;Unknown&#160;exception.&quot;</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">source_location</td>          <td class="paramname"><span class="paramname"><em>location</em></span><span class="paramdefsep"> = </span><span class="paramdefval">source_location::current()</span>, </td>
+          <td class="paramtype">source_location</td>          <td class="paramname"><span class="paramname"><em>where</em></span><span class="paramdefsep"> = </span><span class="paramdefval">source_location::current()</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">stacktrace</td>          <td class="paramname"><span class="paramname"><em>moment</em></span><span class="paramdefsep"> = </span><span class="paramdefval">stacktrace::current(1)</span>&#160;)</td>
+          <td class="paramtype">stacktrace</td>          <td class="paramname"><span class="paramname"><em>when</em></span><span class="paramdefsep"> = </span><span class="paramdefval">stacktrace::current(1)</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -270,8 +270,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a2b90febf541388d1fc53861f4eb1d3f0" name="a2b90febf541388d1fc53861f4eb1d3f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b90febf541388d1fc53861f4eb1d3f0">&#9670;&#160;</a></span>_info</h2>
+<a id="a19e1fb1d09f3ccd35d85769f4ee2b770" name="a19e1fb1d09f3ccd35d85769f4ee2b770"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19e1fb1d09f3ccd35d85769f4ee2b770">&#9670;&#160;</a></span>_what</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -280,7 +280,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">string boil::classes::Exception::_info</td>
+          <td class="memname">string boil::classes::Exception::_what</td>
         </tr>
       </table>
   </td>
@@ -294,8 +294,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ac9b438099fb3dc70316dcc22d7ce80ea" name="ac9b438099fb3dc70316dcc22d7ce80ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9b438099fb3dc70316dcc22d7ce80ea">&#9670;&#160;</a></span>_location</h2>
+<a id="ad0cb70d6bedd7b033d2f5ec91fb16339" name="ad0cb70d6bedd7b033d2f5ec91fb16339"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0cb70d6bedd7b033d2f5ec91fb16339">&#9670;&#160;</a></span>_when</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -304,31 +304,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">source_location boil::classes::Exception::_location</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">export</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="boilerplate_8cpp_source.html#l00055">55</a> of file <a class="el" href="boilerplate_8cpp_source.html">boilerplate.cpp</a>.</p>
-
-</div>
-</div>
-<a id="ac71a8d995ff4b13064971815584ee6b9" name="ac71a8d995ff4b13064971815584ee6b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac71a8d995ff4b13064971815584ee6b9">&#9670;&#160;</a></span>_moment</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">stacktrace boil::classes::Exception::_moment</td>
+          <td class="memname">stacktrace boil::classes::Exception::_when</td>
         </tr>
       </table>
   </td>
@@ -339,6 +315,30 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="boilerplate_8cpp_source.html#l00056">56</a> of file <a class="el" href="boilerplate_8cpp_source.html">boilerplate.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a123c6402c35cf9ab3b65254edd848c7f" name="a123c6402c35cf9ab3b65254edd848c7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a123c6402c35cf9ab3b65254edd848c7f">&#9670;&#160;</a></span>_where</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">source_location boil::classes::Exception::_where</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">export</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="boilerplate_8cpp_source.html#l00055">55</a> of file <a class="el" href="boilerplate_8cpp_source.html">boilerplate.cpp</a>.</p>
 
 </div>
 </div>

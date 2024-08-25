@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['graph_0',['Graph',['../classGraph.html',1,'']]]
+  ['visitor_0',['Visitor',['../structboil_1_1classes_1_1Visitor.html',1,'boil::classes::Visitor&lt; Functors &gt;'],['../structboil_1_1classes_1_1Visitor.html',1,'boil::Visitor&lt; Functors &gt;']]]
 ];

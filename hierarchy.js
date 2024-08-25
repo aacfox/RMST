@@ -1,10 +1,11 @@
 var hierarchy =
 [
-    [ "boil::classes::Combination", "classboil_1_1classes_1_1Combination.html", null ],
-    [ "boil::Combination", "classboil_1_1classes_1_1Combination.html", null ],
-    [ "Graph< Weight >::Edge", "structGraph_1_1Edge.html", null ],
+    [ "boil::Graph< Weight >::Edge", "structboil_1_1Graph_1_1Edge.html", null ],
     [ "exception", null, [
       [ "boil::classes::Exception", "classboil_1_1classes_1_1Exception.html", null ]
     ] ],
-    [ "Graph< Weight >", "classGraph.html", null ]
+    [ "Functors...", null, [
+      [ "boil::classes::Visitor< Functors >", "structboil_1_1classes_1_1Visitor.html", null ]
+    ] ],
+    [ "boil::Graph< Weight >", "classboil_1_1Graph.html", null ]
 ];

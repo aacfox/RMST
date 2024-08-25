@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['begin_0',['begin',['../classGraph.html#ae41ba9615a81eb418c5670d40881d7b2',1,'Graph']]],
+  ['begin_0',['begin',['../classboil_1_1Graph.html#ae7dfb92b3cbc11031ce77ee5eb90529f',1,'boil::Graph']]],
   ['benchmark_1',['benchmark',['../namespaceboil_1_1functions.html#a067c52dcfa8ff1745041d2e243ae3439',1,'boil::benchmark()'],['../namespaceboil_1_1functions.html#a067c52dcfa8ff1745041d2e243ae3439',1,'boil::functions::benchmark()']]],
   ['boil_2',['boil',['../namespaceboil.html',1,'']]],
   ['boil_3a_3aclasses_3',['classes',['../namespaceboil_1_1classes.html',1,'boil']]],

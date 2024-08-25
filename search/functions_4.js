@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['graph_0',['Graph',['../classGraph.html#a05dba5bf8fc7d7753a901553f26e1760',1,'Graph::Graph()=default'],['../classGraph.html#a0589b4db4bf33d22df48c57be8634f95',1,'Graph::Graph(auto &amp;&amp;edges)']]]
+  ['graph_0',['Graph',['../classboil_1_1Graph.html#af19f01534c91f9e66a2cd4511bc104d4',1,'boil::Graph::Graph()=default'],['../classboil_1_1Graph.html#a46a2ae694b40477e708f3f1776b52301',1,'boil::Graph::Graph(auto &amp;&amp;edges)']]]
 ];

@@ -1,0 +1,6 @@
+<map id="boil::Graph::mst" name="boil::Graph::mst">
+<area shape="rect" id="Node000001" title="The actual RMST." alt="" coords="192,29,302,55"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="276,16,266,10,247,8,229,10,219,15,217,20,222,28,218,30,212,21,215,11,227,5,247,3,268,5,279,12"/>
+<area shape="rect" id="Node000002" href="$classboil_1_1Graph.html#a8f4e56e65044c762a8a9b7fab26a7eca" title="Mermaid code generator." alt="" coords="5,29,144,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,45,144,45,144,40,176,40"/>
+</map>

@@ -88,7 +88,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"namespaceboil_1_1utilities.html#a4602626943325a0ca078e5a113c06d51"
+"wikipedia__graph_8csv.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
