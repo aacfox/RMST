@@ -93,27 +93,27 @@ namespace boil {
 		/** \throws boil::Exception if the last's vertex id is bigger than template parameter */
 		template <size_t vertices_upper_bound = 1024> Graph mst() const {
 			using Supernode = bitset<vertices_upper_bound>;
-			///\internal bitset-based hash map for easier node combining
+			///bitset-based hash map for easier node combining
 			using edge_multimap = unordered_multimap<Supernode, Edge>;
 			if (vertices_upper_bound < fresh_id()) throw Exception{
 				"Default template argument for number of vertices (which is 1024) proved insufficient." };
 			edge_multimap edges{};
-			vector<Supernode> supernodes(fresh_id()); ///\internal vector for tracking remaining supernodes
-			vector nodes(fresh_id(), supernodes.end()); ///\internal disjoint set of original nodes
-			///\internal the latter two can be interpreted as nonoptimized-memory-wise hash maps: vertice_ID -> respective_type
+			vector<Supernode> supernodes(fresh_id()); ///vector for tracking remaining supernodes
+			vector nodes(fresh_id(), supernodes.end()); ///disjoint set of original nodes
+			///the latter two can be interpreted as nonoptimized-memory-wise hash maps: vertice_ID -> respective_type
 			for (auto i{ this->cbegin() }; i != this->cend(); ++i) {
 				supernodes[i->origin].set(i->origin);
 				nodes[i->origin] = supernodes.begin() + i->origin;
 				edges.emplace(supernodes[i->origin], *i);
 			}
 			auto iter{ edges.cend() }, sentinel{ iter };
-			/**\internal trim one of the subroutines of boruvka()
+			/**trim one of the subroutines of boruvka()
 				should be used once on the original graph,
 				incase it already contains self loops or redundant edges
 				\throws smth smth
 				\see <a href="graph_8cpp_source.html#tsr_def">definition</a>
 			*/
-			auto trim_selfs_redundants = [&](edge_multimap& some_edges) { /**\internal <a name = "tsr_def">def</a> */
+			auto trim_selfs_redundants = [&](edge_multimap& some_edges) { /**<a name = "tsr_def">def</a> */
 				for (unordered_map<Supernode, decltype(iter)> connections;
 					  cauto & supernode : supernodes
 					  | views::filter([](cauto& x) { return x.any(); }))
@@ -136,7 +136,7 @@ namespace boil {
 			trim_selfs_redundants(edges);
 			auto rmst = [&](this auto self, edge_multimap& input) {
 				edge_set boruvkas{};
-				/**\internal \brief boruvka documentation
+				/**\brief boruvka documentation
 					\details \throws also smthsmth
 					\see <a href="graph_8cpp_source.html#boruvka_def">definition</a>
 					\see <a href="graph_8cpp_source.html#cycle">cycle</a>
@@ -177,8 +177,8 @@ namespace boil {
 					boruvkas.merge(buffer);
 					trim_selfs_redundants(input);
 				};
-				///\internal f_heavy_eraser bla bla blah
-				/**\internal performs some magic modificated linear time mst verification algo
+				///f_heavy_eraser bla bla blah
+				/**performs some magic modificated linear time mst verification algo
 				for deleting F_heavy edges from contracted graph,
 				given the forest of its subgraph
 				*/
