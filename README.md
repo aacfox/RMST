@@ -4,7 +4,7 @@ C++ Implementation of [a randomized expected linear time MST algorithm by D. Kar
 > Time complexity is currently semilinear because I'm struggling with the last of the subroutines of the algorithm.  
 
 
-For more eleborate discussion you may directly follow to [the wiki](https://aacfox.github.io/RMST/).  
+For a more eleborate discussion you may directly follow to [the wiki](https://aacfox.github.io/RMST/).  
 
 ## Introduction 
 For I am Constantine, the 'C' ~~in C++~~ in my nickname! And this is my half-assed but whole-hearted attempt to understand and implement the mentioned algo. I can hardly explain why of all the probable topics I deem this the most exciting, so here we go.  
