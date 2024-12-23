@@ -7,18 +7,18 @@ C++ Implementation of [a randomized expected linear time MST algorithm by D. Kar
 For a more eleborate discussion you may directly follow to [the wiki](https://aacfox.github.io/RMST/).  
 
 ## Introduction 
-For I am Constantine, the 'C' ~~in C++~~ in my nickname! And this is my half-assed but whole-hearted attempt to understand and implement the mentioned algo. I can hardly explain why of all the probable topics I deem this the most exciting, so here we go.  
+For I am Constantine, the 'C' ~~in C++~~ in my nickname! And this is my half-assed but whole-hearted attempt to understand and implement the mentioned algo. I can hardly explain myself why of all the probable topics I deem this the most exciting, so here we go.  
 In the wild, there exist other deadly cool algos for the same purpose (which is finding MSTs[^1] of graphs, in case you forgot) but this one just rubs me the right way and was easier to comprehend and finally implement. [Others](./README.md#other-cool-mst-algos) are deterministic with time complexities being great always without degenerating in worst cases.  
 [^1]: [Minimum spanning tree](https://en.wikipedia.org/wiki/Minimum_spanning_tree) (or minimum spanning forest - which is a more general notion).  
 
 ## What it does
-Eats graph, poos its MSF[^1] in the same format!  
+Eats graph, produces its MSF[^1] in the same format!  
 
 ### Limitations so far  
 [The program](./mst_generator.exe) supports only input files with `.csv` extension and formatted as ***edge list*** with ***semicolon*** as a delimiter and ***integral*** weights. See [example](./docs/wikipedia_graph.csv). To fulfill more complicated tasks source code provides more powerful tools not included in the executable ~~'cause of my lazy ass~~ to keep things simple and focus resources of humankind on [much bigger problem](./docs/CONTRIBUTING.md#tasks).  
 
 ## Get started
-The simplest case:
+The simplest case (only for Windows):
 1. Place [program](./mst_generator.exe) AND your input files in the same folder or COPY a path to the desired location to the clipboard  
 2. Run program.
    * If you chose the first option, proceed to step 3.
